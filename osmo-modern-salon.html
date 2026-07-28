@@ -1,803 +1,2729 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OSMO MODERN SALON · Award-Winning Luxury</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OSMO MODERN SALON - Premium grooming services in Hazaribagh. Haircuts, beard styling, facials, hair spa, coloring & more. Book your appointment today." />
+    <meta name="keywords" content="salon, premium salon, haircut, beard, facial, spa, grooming, Hazaribagh" />
+    <meta property="og:title" content="OSMO MODERN SALON - Premium Grooming" />
+    <meta property="og:description" content="Experience premium grooming at OSMO MODERN SALON. Book your appointment today." />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <title>OSMO MODERN SALON - Premium Grooming</title>
 
-  <!-- ===== PREMIUM FONTS ===== -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "OSMO MODERN SALON",
+            "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Pugmil Rd, Near Kallu Chowk V-Mart, Friends Colony, Pugmil",
+                "addressLocality": "Hazaribagh",
+                "addressRegion": "Jharkhand",
+                "postalCode": "825301",
+                "addressCountry": "IN"
+            },
+            "telephone": "+917979071560",
+            "openingHours": "Mo-Su 08:00-21:30",
+            "priceRange": "₹₹"
+        }
+    </script>
 
-  <!-- ===== TAILWIND via CDN ===== -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- ===== FONT AWESOME 6 (free) ===== -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- ===== SWIPER.JS (lightweight slider) ===== -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <style>
-    /* ----- GLOBAL RESET & VARIABLES ----- */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <!-- Swiper.js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    :root {
-      --gold: #D4AF37;
-      --rose: #e8b4b8;
-      --beige: #f5efe6;
-      --dark: #0F0F0F;
-      --dark-soft: #151515;
-      --white: #ffffff;
-      --glass-bg: rgba(255, 255, 255, 0.06);
-      --glass-border: rgba(255, 255, 255, 0.12);
-      --shadow-gold: 0 8px 32px rgba(212, 175, 55, 0.25);
-    }
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <style>
+        /* ===== ROOT & RESET ===== */
+        :root {
+            --gold: #C9A84C;
+            --gold-light: #E8D28A;
+            --gold-dark: #A8893A;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --light: #ffffff;
+            --text: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --glass: rgba(255, 255, 255, 0.06);
+            --glass-border: rgba(255, 255, 255, 0.10);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+            --radius: 16px;
+            --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font: 'Poppins', sans-serif;
+        }
 
-    body {
-      font-family: 'Manrope', 'DM Sans', sans-serif;
-      background-color: var(--dark);
-      color: #eaeaea;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
 
-    .font-display {
-      font-family: 'Playfair Display', serif;
-    }
-    .font-sans {
-      font-family: 'Manrope', 'DM Sans', sans-serif;
-    }
+        body {
+            font-family: var(--font);
+            background: var(--darker);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
 
-    /* ----- GLASSMORPHISM UTILITY ----- */
-    .glass {
-      background: var(--glass-bg);
-      backdrop-filter: blur(16px) saturate(180%);
-      -webkit-backdrop-filter: blur(16px) saturate(180%);
-      border: 1px solid var(--glass-border);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-    }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        a:hover {
+            color: var(--gold);
+        }
 
-    .glass-light {
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
+        ::selection {
+            background: var(--gold);
+            color: var(--dark);
+        }
 
-    /* ----- GOLD ACCENTS ----- */
-    .text-gold {
-      color: var(--gold);
-    }
-    .border-gold {
-      border-color: var(--gold);
-    }
-    .bg-gold {
-      background: var(--gold);
-    }
-    .hover-gold:hover {
-      color: var(--gold);
-    }
-    .shadow-gold {
-      box-shadow: var(--shadow-gold);
-    }
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--darker);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--gold);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--gold-dark);
+        }
 
-    /* ----- BUTTON RIPPLE / MAGNETIC (basic) ----- */
-    .btn-ripple {
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .btn-ripple::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-    .btn-ripple:active::after {
-      width: 300px;
-      height: 300px;
-    }
-    .btn-ripple:hover {
-      transform: scale(1.04) translateY(-2px);
-      box-shadow: 0 12px 40px rgba(212, 175, 55, 0.35);
-    }
+        /* ===== LOADING SCREEN ===== */
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: var(--darker);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        #loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .loader-ring {
+            width: 70px;
+            height: 70px;
+            border: 4px solid transparent;
+            border-top-color: var(--gold);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            position: relative;
+        }
+        .loader-ring::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 4px solid transparent;
+            border-bottom-color: var(--gold-light);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite reverse;
+        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .loader-text {
+            position: absolute;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--gold);
+            font-weight: 600;
+            animation: pulse 1.4s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
 
-    /* ----- CUSTOM SCROLLBAR (luxury) ----- */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0a0a0a;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--gold);
-      border-radius: 12px;
-    }
+        /* ===== GLASSMORPHISM ===== */
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius);
+        }
+        .glass-dark {
+            background: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(12px) saturate(160%);
+            -webkit-backdrop-filter: blur(12px) saturate(160%);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
 
-    /* ----- LOADING SCREEN (elegant) ----- */
-    #loader {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: var(--dark);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 1.2s ease, visibility 1.2s;
-    }
-    #loader.hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .loader-ring {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
-      border: 3px solid rgba(212, 175, 55, 0.15);
-      border-top-color: var(--gold);
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
+        /* ===== GOLD TEXT ===== */
+        .text-gold {
+            color: var(--gold);
+        }
+        .text-gold-light {
+            color: var(--gold-light);
+        }
 
-    /* ----- HERO PARALLAX BG (slow zoom) ----- */
-    .hero-bg {
-      background: url('https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      will-change: transform;
-    }
+        /* ===== BUTTONS ===== */
+        .btn-gold {
+            background: var(--gold);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 50px;
+            border: none;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            font-family: var(--font);
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-gold:hover {
+            background: var(--gold-light);
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.35);
+        }
+        .btn-gold:active {
+            transform: scale(0.96);
+        }
 
-    /* ----- FLOATING PARTICLES (css only, lightweight) ----- */
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
-      pointer-events: none;
-      animation: floatParticle 12s infinite alternate ease-in-out;
-    }
-    @keyframes floatParticle {
-      0% {
-        transform: translate(0, 0) scale(0.8);
-        opacity: 0.2;
-      }
-      100% {
-        transform: translate(40px, -60px) scale(1.4);
-        opacity: 0.6;
-      }
-    }
+        .btn-outline-gold {
+            background: transparent;
+            color: var(--gold);
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 50px;
+            border: 2px solid var(--gold);
+            transition: var(--transition);
+            font-family: var(--font);
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.25);
+        }
 
-    /* ----- IMAGE REVEAL (GSAP will enhance) ----- */
-    .reveal-img {
-      overflow: hidden;
-    }
-    .reveal-img img {
-      transition: transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .reveal-img:hover img {
-      transform: scale(1.06);
-    }
+        .btn-dark-gold {
+            background: var(--dark);
+            color: var(--gold);
+            font-weight: 600;
+            padding: 12px 32px;
+            border-radius: 50px;
+            border: 2px solid var(--gold);
+            transition: var(--transition);
+            font-family: var(--font);
+            letter-spacing: 0.5px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-dark-gold:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+        }
 
-    /* ----- CARD TILT (vanilla-tilt) + glow ----- */
-    .tilt-card {
-      transition: box-shadow 0.3s ease;
-    }
-    .tilt-card:hover {
-      box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
-    }
+        .btn-gold-sm {
+            padding: 8px 22px;
+            font-size: 14px;
+        }
 
-    /* ----- SERVICE CARD ANIMATED BORDER (gradient) ----- */
-    .service-card-glow {
-      position: relative;
-      background: rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      transition: all 0.4s ease;
-    }
-    .service-card-glow::before {
-      content: '';
-      position: absolute;
-      inset: -2px;
-      border-radius: 16px;
-      padding: 2px;
-      background: linear-gradient(135deg, var(--gold), var(--rose), var(--gold));
-      background-size: 300% 300%;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      opacity: 0;
-      transition: opacity 0.6s ease;
-      animation: shimmerBorder 4s ease infinite;
-    }
-    .service-card-glow:hover::before {
-      opacity: 1;
-    }
-    @keyframes shimmerBorder {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
+        /* ===== SECTION TITLES ===== */
+        .section-title {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+            margin: 12px auto 24px;
+            border-radius: 4px;
+        }
 
-    /* ----- PRICING CARD (best value badge) ----- */
-    .pricing-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .pricing-card:hover {
-      transform: translateY(-12px);
-      border-color: var(--gold);
-      box-shadow: 0 24px 64px rgba(212, 175, 55, 0.12);
-    }
-    .pricing-card.best-value {
-      border-color: var(--gold);
-      background: rgba(212, 175, 55, 0.04);
-    }
+        /* ===== HEADER / NAVBAR ===== */
+        .navbar-custom {
+            background: rgba(10, 10, 10, 0.88);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+            padding: 12px 0;
+            transition: var(--transition);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+        }
+        .navbar-custom.scrolled {
+            background: rgba(5, 5, 5, 0.95);
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
+            padding: 8px 0;
+        }
+        .navbar-custom .navbar-brand {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+        .navbar-custom .navbar-brand span {
+            color: var(--light);
+        }
+        .navbar-custom .nav-link {
+            color: var(--text) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 8px 16px !important;
+            transition: var(--transition);
+            position: relative;
+            letter-spacing: 0.3px;
+        }
+        .navbar-custom .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: var(--transition);
+            transform: translateX(-50%);
+        }
+        .navbar-custom .nav-link:hover::after,
+        .navbar-custom .nav-link.active::after {
+            width: 60%;
+        }
+        .navbar-custom .nav-link:hover {
+            color: var(--gold) !important;
+        }
+        .navbar-custom .nav-link.active {
+            color: var(--gold) !important;
+        }
 
-    /* ----- TESTIMONIAL GLASS CARD (3D auto-slide via Swiper) ----- */
-    .testimonial-card {
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 20px;
-      padding: 32px 28px;
-      transition: all 0.3s;
-    }
+        .navbar-custom .navbar-toggler {
+            border-color: var(--gold);
+            padding: 6px 10px;
+        }
+        .navbar-custom .navbar-toggler:focus {
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.3);
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23C9A84C' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
 
-    /* ----- BEFORE/AFTER SLIDER (custom) ----- */
-    .ba-container {
-      position: relative;
-      overflow: hidden;
-      border-radius: 20px;
-    }
-    .ba-after {
-      position: absolute;
-      inset: 0;
-      width: 50%;
-      overflow: hidden;
-      border-right: 3px solid var(--gold);
-      transition: width 0.1s;
-    }
-    .ba-handle {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 40px;
-      height: 40px;
-      background: var(--gold);
-      border-radius: 50%;
-      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-      cursor: ew-resize;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #000;
-    }
+        /* Header action buttons */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header-actions .btn-call {
+            background: var(--gold);
+            color: var(--dark);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 18px;
+            border: none;
+        }
+        .header-actions .btn-call:hover {
+            transform: scale(1.1);
+            background: var(--gold-light);
+        }
+        .header-actions .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            font-size: 20px;
+            border: none;
+        }
+        .header-actions .btn-whatsapp:hover {
+            transform: scale(1.1);
+            background: #1ebe5d;
+        }
 
-    /* ----- FOOTER LUXURY ----- */
-    .footer-gradient {
-      background: linear-gradient(145deg, #0a0a0a, #151515);
-    }
+        /* ===== HERO SLIDER ===== */
+        .hero-slider {
+            width: 100%;
+            height: 100vh;
+            min-height: 600px;
+            position: relative;
+            margin-top: 0;
+        }
+        .hero-slider .swiper-slide {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-slider .swiper-slide .slide-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.05);
+            transition: transform 8s ease;
+        }
+        .hero-slider .swiper-slide-active .slide-bg {
+            transform: scale(1);
+        }
+        .hero-slider .swiper-slide .slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                    rgba(0, 0, 0, 0.75) 0%,
+                    rgba(0, 0, 0, 0.40) 60%,
+                    rgba(0, 0, 0, 0.65) 100%);
+            z-index: 1;
+        }
+        .hero-slider .swiper-slide .slide-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 20px;
+            max-width: 820px;
+        }
+        .hero-slider .swiper-slide .slide-content .badge-gold {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.18);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            padding: 6px 24px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--gold-light);
+            font-weight: 500;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+        .hero-slider .swiper-slide .slide-content h1 {
+            font-size: clamp(2.6rem, 8vw, 5.2rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.08;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+        }
+        .hero-slider .swiper-slide .slide-content h1 .highlight {
+            color: var(--gold);
+        }
+        .hero-slider .swiper-slide .slide-content p {
+            font-size: clamp(1rem, 1.6vw, 1.3rem);
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 32px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        .hero-slider .swiper-slide .slide-content .btn-group-hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
 
-    /* ----- RESPONSIVE TWEAKS (tailwind handles most) ----- */
-    @media (max-width: 640px) {
-      .hero-title {
-        font-size: 2.8rem !important;
-      }
-      .hero-sub {
-        font-size: 1rem !important;
-      }
-    }
+        /* Swiper navigation */
+        .hero-slider .swiper-pagination {
+            bottom: 30px !important;
+        }
+        .hero-slider .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.3);
+            width: 12px;
+            height: 12px;
+            opacity: 1;
+            transition: var(--transition);
+        }
+        .hero-slider .swiper-pagination-bullet-active {
+            background: var(--gold);
+            transform: scale(1.3);
+            box-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
+        }
+        .hero-slider .swiper-button-next,
+        .hero-slider .swiper-button-prev {
+            color: var(--gold);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(8px);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            transition: var(--transition);
+        }
+        .hero-slider .swiper-button-next:hover,
+        .hero-slider .swiper-button-prev:hover {
+            background: var(--gold);
+            color: var(--dark);
+        }
+        .hero-slider .swiper-button-next::after,
+        .hero-slider .swiper-button-prev::after {
+            font-size: 18px;
+            font-weight: 700;
+        }
 
-    /* ----- SCROLL PROGRESS (thin gold bar) ----- */
-    #scroll-progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--gold), var(--rose));
-      z-index: 9999;
-      width: 0%;
-      transition: width 0.1s;
-    }
+        /* ===== SECTION PADDING ===== */
+        .section-padding {
+            padding: 90px 0;
+        }
+        .section-padding-sm {
+            padding: 60px 0;
+        }
 
-    /* ----- MOBILE MENU (glass) ----- */
-    .mobile-menu {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 15, 15, 0.92);
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    .mobile-menu.open {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .mobile-menu a {
-      font-size: 2rem;
-      font-family: 'Playfair Display', serif;
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .mobile-menu a:hover {
-      color: var(--gold);
-    }
-  </style>
+        /* ===== ABOUT ===== */
+        .about-image-wrap {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .about-image-wrap img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .about-image-wrap:hover img {
+            transform: scale(1.03);
+        }
+        .about-image-wrap .about-badge {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(12px);
+            padding: 16px 24px;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--gold);
+        }
+        .about-image-wrap .about-badge h4 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold);
+            margin: 0;
+        }
+        .about-image-wrap .about-badge p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .about-features .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text);
+        }
+        .about-features .feature-item i {
+            color: var(--gold);
+            font-size: 18px;
+            width: 28px;
+            text-align: center;
+        }
+
+        /* ===== WHY CHOOSE US ===== */
+        .why-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+        .why-card:hover::before {
+            transform: scaleX(1);
+        }
+        .why-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(201, 168, 76, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .why-card .icon-wrap {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 18px;
+            background: rgba(201, 168, 76, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--gold);
+            transition: var(--transition);
+        }
+        .why-card:hover .icon-wrap {
+            background: var(--gold);
+            color: var(--dark);
+            transform: scale(1.08) rotate(-6deg);
+        }
+        .why-card h5 {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+        }
+        .why-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* ===== SERVICES ===== */
+        .service-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(201, 168, 76, 0.25);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+        }
+        .service-card .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .service-card:hover .service-img {
+            transform: scale(1.04);
+        }
+        .service-card .service-body {
+            padding: 20px 22px 24px;
+            position: relative;
+        }
+        .service-card .service-body h5 {
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+        }
+        .service-card .service-body .price-tag {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.12);
+            padding: 2px 14px;
+            border-radius: 50px;
+            border: 1px solid rgba(201, 168, 76, 0.15);
+        }
+        .service-card .service-body .btn-book {
+            margin-top: 12px;
+            width: 100%;
+        }
+
+        /* ===== PRICE LIST ===== */
+        .pricing-table {
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: var(--radius);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+        .pricing-table .pricing-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            transition: var(--transition);
+        }
+        .pricing-table .pricing-item:last-child {
+            border-bottom: none;
+        }
+        .pricing-table .pricing-item:hover {
+            background: rgba(201, 168, 76, 0.05);
+            padding-left: 30px;
+        }
+        .pricing-table .pricing-item .service-name {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+        .pricing-table .pricing-item .service-price {
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 1.05rem;
+        }
+        .pricing-table .pricing-item .service-price .currency {
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-right: 2px;
+        }
+
+        /* ===== OFFERS ===== */
+        .offer-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+            border: 1px solid rgba(201, 168, 76, 0.12);
+            border-radius: var(--radius);
+            padding: 32px 24px;
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        .offer-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.04), transparent 70%);
+            pointer-events: none;
+        }
+        .offer-card:hover {
+            transform: translateY(-6px) scale(1.01);
+            border-color: var(--gold);
+            box-shadow: 0 12px 48px rgba(201, 168, 76, 0.08);
+        }
+        .offer-card .offer-icon {
+            font-size: 42px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+        .offer-card h5 {
+            font-weight: 700;
+            font-size: 1.15rem;
+        }
+        .offer-card .offer-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .offer-card .offer-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            font-weight: 700;
+            padding: 2px 16px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+            display: block;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+        .gallery-item .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-item .gallery-overlay i {
+            font-size: 44px;
+            color: var(--gold);
+            transform: scale(0.6);
+            transition: var(--transition);
+        }
+        .gallery-item:hover .gallery-overlay i {
+            transform: scale(1);
+        }
+
+        .gallery-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 220px;
+            gap: 16px;
+        }
+        .gallery-masonry .gallery-item:nth-child(1) {
+            grid-row: span 2;
+        }
+        .gallery-masonry .gallery-item:nth-child(4) {
+            grid-row: span 2;
+        }
+        .gallery-masonry .gallery-item:nth-child(7) {
+            grid-row: span 2;
+        }
+        .gallery-masonry .gallery-item:nth-child(10) {
+            grid-row: span 2;
+        }
+
+        /* ===== REVIEWS ===== */
+        .review-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            transition: var(--transition);
+            height: 100%;
+        }
+        .review-card:hover {
+            border-color: rgba(201, 168, 76, 0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .review-card .review-stars {
+            color: #f5b342;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+        .review-card .review-text {
+            font-size: 0.95rem;
+            color: var(--text);
+            font-style: italic;
+            margin-bottom: 14px;
+        }
+        .review-card .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .review-card .review-author img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+        }
+        .review-card .review-author .name {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .review-card .review-author .role {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .google-rating-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .google-rating-box .big-stars {
+            color: #f5b342;
+            font-size: 32px;
+            letter-spacing: 6px;
+        }
+        .google-rating-box .rating-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        .google-rating-box .rating-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ===== BOOKING ===== */
+        .booking-form {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: 40px 36px;
+        }
+        .booking-form .form-control,
+        .booking-form .form-select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-family: var(--font);
+            transition: var(--transition);
+        }
+        .booking-form .form-control:focus,
+        .booking-form .form-select:focus {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.12);
+            color: var(--text);
+        }
+        .booking-form .form-control::placeholder {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+        .booking-form .form-label {
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .booking-form .form-select option {
+            background: var(--dark);
+            color: var(--text);
+        }
+        .booking-form .btn-submit {
+            width: 100%;
+            padding: 16px;
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact-info-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            transition: var(--transition);
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+        }
+        .contact-info-card:hover {
+            border-color: rgba(201, 168, 76, 0.2);
+            transform: translateY(-4px);
+        }
+        .contact-info-card .contact-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: rgba(201, 168, 76, 0.12);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 20px;
+        }
+        .contact-info-card .contact-text h6 {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 2px;
+        }
+        .contact-info-card .contact-text p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* ===== MAP ===== */
+        .map-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            display: block;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+            margin-bottom: 14px;
+            transition: var(--transition);
+        }
+        .faq-item:hover {
+            border-color: rgba(201, 168, 76, 0.15);
+        }
+        .faq-item .faq-question {
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            user-select: none;
+        }
+        .faq-item .faq-question i {
+            color: var(--gold);
+            transition: var(--transition);
+            font-size: 18px;
+        }
+        .faq-item .faq-question.collapsed i {
+            transform: rotate(0deg);
+        }
+        .faq-item .faq-question:not(.collapsed) i {
+            transform: rotate(180deg);
+        }
+        .faq-item .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .faq-item .faq-answer.collapse {
+            display: none;
+        }
+        .faq-item .faq-answer.collapse.show {
+            display: block;
+        }
+
+        /* ===== NEWSLETTER ===== */
+        .newsletter-wrap {
+            background: linear-gradient(145deg, rgba(201, 168, 76, 0.06), rgba(201, 168, 76, 0.01));
+            border: 1px solid rgba(201, 168, 76, 0.10);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            text-align: center;
+        }
+        .newsletter-wrap .input-group {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .newsletter-wrap .input-group .form-control {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            padding: 14px 20px;
+            border-radius: 50px 0 0 50px;
+            font-family: var(--font);
+        }
+        .newsletter-wrap .input-group .form-control:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.10);
+        }
+        .newsletter-wrap .input-group .btn-gold {
+            border-radius: 0 50px 50px 0;
+            padding: 14px 28px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(201, 168, 76, 0.08);
+            padding: 60px 0 30px;
+            margin-top: 40px;
+        }
+        .footer h5 {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+        .footer .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer .footer-links a {
+            color: var(--text-muted);
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        .footer .footer-links a:hover {
+            color: var(--gold);
+            padding-left: 6px;
+        }
+        .footer .social-icons {
+            display: flex;
+            gap: 14px;
+            margin-top: 12px;
+        }
+        .footer .social-icons a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+        .footer .social-icons a:hover {
+            background: var(--gold);
+            color: var(--dark);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(201, 168, 76, 0.2);
+            border-color: var(--gold);
+        }
+        .footer .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 24px;
+            margin-top: 32px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        .footer .footer-bottom span {
+            color: var(--gold);
+        }
+
+        /* ===== FLOATING BUTTONS ===== */
+        .floating-buttons {
+            position: fixed;
+            right: 20px;
+            bottom: 100px;
+            z-index: 9998;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .floating-buttons .float-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: #fff;
+            border: none;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+        }
+        .floating-buttons .float-btn:hover {
+            transform: scale(1.12);
+        }
+        .floating-buttons .float-btn .tooltip-text {
+            position: absolute;
+            right: 68px;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .floating-buttons .float-btn:hover .tooltip-text {
+            opacity: 1;
+            right: 72px;
+        }
+        .float-whatsapp {
+            background: #25D366;
+        }
+        .float-whatsapp:hover {
+            background: #1ebe5d;
+        }
+        .float-call {
+            background: var(--gold);
+        }
+        .float-call:hover {
+            background: var(--gold-light);
+            color: var(--dark);
+        }
+        .float-top {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            font-size: 22px;
+        }
+        .float-top:hover {
+            background: var(--gold);
+            color: var(--dark);
+            border-color: var(--gold);
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== COUNTER ===== */
+        .counter-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1.2;
+        }
+        .counter-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991.98px) {
+            .navbar-custom .navbar-collapse {
+                background: rgba(10, 10, 10, 0.96);
+                backdrop-filter: blur(20px);
+                padding: 20px 16px;
+                border-radius: var(--radius);
+                border: 1px solid rgba(255, 255, 255, 0.04);
+                margin-top: 12px;
+            }
+            .navbar-custom .nav-link {
+                padding: 10px 16px !important;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            }
+            .navbar-custom .nav-link:last-child {
+                border-bottom: none;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .hero-slider .swiper-slide .slide-content h1 {
+                font-size: 2.6rem;
+            }
+            .hero-slider .swiper-button-next,
+            .hero-slider .swiper-button-prev {
+                display: none;
+            }
+            .about-features {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gallery-masonry {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                grid-auto-rows: 160px;
+                gap: 10px;
+            }
+            .floating-buttons {
+                right: 14px;
+                bottom: 80px;
+            }
+            .floating-buttons .float-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 20px;
+            }
+            .booking-form {
+                padding: 28px 18px;
+            }
+            .section-padding {
+                padding: 60px 0;
+            }
+            .section-padding-sm {
+                padding: 40px 0;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .hero-slider .swiper-slide .slide-content h1 {
+                font-size: 2rem;
+            }
+            .hero-slider .swiper-slide .slide-content .badge-gold {
+                font-size: 0.65rem;
+                padding: 4px 16px;
+            }
+            .hero-slider .swiper-slide .slide-content .btn-group-hero .btn {
+                padding: 10px 22px;
+                font-size: 0.85rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .about-image-wrap img {
+                height: 260px;
+            }
+            .about-features {
+                grid-template-columns: 1fr 1fr;
+                gap: 6px;
+            }
+            .about-features .feature-item {
+                font-size: 0.8rem;
+            }
+            .gallery-masonry {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+                grid-auto-rows: 140px;
+                gap: 8px;
+            }
+            .pricing-table .pricing-item {
+                padding: 12px 16px;
+                font-size: 0.9rem;
+            }
+            .google-rating-box .rating-number {
+                font-size: 2.2rem;
+            }
+            .google-rating-box .big-stars {
+                font-size: 24px;
+            }
+            .footer {
+                padding: 40px 0 20px;
+            }
+            .counter-number {
+                font-size: 2.2rem;
+            }
+            .floating-buttons .float-btn .tooltip-text {
+                display: none;
+            }
+            .newsletter-wrap {
+                padding: 28px 18px;
+            }
+            .newsletter-wrap .input-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .newsletter-wrap .input-group .form-control {
+                border-radius: 50px !important;
+            }
+            .newsletter-wrap .input-group .btn-gold {
+                border-radius: 50px !important;
+                width: 100%;
+            }
+            .offer-card {
+                padding: 24px 16px;
+            }
+            .contact-info-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        /* ===== UTILITY ===== */
+        .bg-gradient-gold {
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.06), transparent);
+        }
+        .border-gold {
+            border-color: var(--gold) !important;
+        }
+        .gap-2 {
+            gap: 8px;
+        }
+        .gap-3 {
+            gap: 16px;
+        }
+        .gap-4 {
+            gap: 24px;
+        }
+        .fw-700 {
+            font-weight: 700;
+        }
+        .fw-800 {
+            font-weight: 800;
+        }
+        .fw-900 {
+            font-weight: 900;
+        }
+        .letter-spacing-1 {
+            letter-spacing: 1px;
+        }
+        .letter-spacing-2 {
+            letter-spacing: 2px;
+        }
+
+        /* Image popup modal */
+        .image-popup-modal .modal-content {
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: var(--radius);
+        }
+        .image-popup-modal .modal-body {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+        .image-popup-modal .modal-body img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .image-popup-modal .btn-close {
+            filter: invert(1) brightness(2);
+            opacity: 0.7;
+        }
+        .image-popup-modal .btn-close:hover {
+            opacity: 1;
+        }
+
+        /* Toast notification */
+        .toast-custom {
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: var(--radius);
+            color: var(--text);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+        }
+        .toast-custom .toast-header {
+            background: transparent;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--gold);
+        }
+        .toast-custom .toast-header .btn-close {
+            filter: invert(1) brightness(2);
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- ===== LOADING SCREEN ===== -->
-  <div id="loader">
-    <div class="loader-ring"></div>
-    <p class="text-gold mt-6 text-sm tracking-[0.3em] uppercase font-sans">Osmo</p>
-  </div>
-
-  <!-- ===== SCROLL PROGRESS ===== -->
-  <div id="scroll-progress"></div>
-
-  <!-- ===== MOBILE MENU OVERLAY ===== -->
-  <div id="mobileMenu" class="mobile-menu">
-    <button id="closeMenu" class="absolute top-8 right-8 text-3xl text-white/70 hover:text-gold transition">
-      <i class="fas fa-times"></i>
-    </button>
-    <a href="#hero" class="menu-link">Home</a>
-    <a href="#services" class="menu-link">Services</a>
-    <a href="#about" class="menu-link">About</a>
-    <a href="#gallery" class="menu-link">Gallery</a>
-    <a href="#testimonials" class="menu-link">Testimonials</a>
-    <a href="#booking" class="menu-link">Book</a>
-    <a href="#contact" class="menu-link">Contact</a>
-  </div>
-
-  <!-- ===== HEADER / NAVIGATION (sticky + glass) ===== -->
-  <header id="hero" class="relative w-full h-screen overflow-hidden hero-bg">
-    <!-- overlay -->
-    <div class="absolute inset-0 bg-black/50 z-0"></div>
-
-    <!-- floating particles (css) -->
-    <div class="particle w-32 h-32 top-[10%] left-[5%]"></div>
-    <div class="particle w-48 h-48 bottom-[20%] right-[8%]"></div>
-    <div class="particle w-24 h-24 top-[60%] left-[70%]"></div>
-
-    <!-- NAVIGATION (sticky, glass) -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-4 px-6 md:px-12 flex items-center justify-between glass border-b border-white/5">
-      <div class="flex items-center gap-2">
-        <span class="text-2xl md:text-3xl font-display font-bold text-gold tracking-wide">OSMO</span>
-        <span class="hidden md:inline text-xs text-white/40 font-light tracking-[0.2em] uppercase">Modern Salon</span>
-      </div>
-
-      <!-- desktop menu -->
-      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-white/80">
-        <li><a href="#hero" class="hover:text-gold transition nav-link">Home</a></li>
-        <li><a href="#services" class="hover:text-gold transition nav-link">Services</a></li>
-        <li><a href="#about" class="hover:text-gold transition nav-link">About</a></li>
-        <li><a href="#gallery" class="hover:text-gold transition nav-link">Gallery</a></li>
-        <li><a href="#testimonials" class="hover:text-gold transition nav-link">Reviews</a></li>
-        <li><a href="#booking" class="hover:text-gold transition nav-link">Book</a></li>
-        <li><a href="#contact" class="hover:text-gold transition nav-link">Contact</a></li>
-      </ul>
-
-      <!-- right side: CTA + mobile toggle -->
-      <div class="flex items-center gap-4">
-        <a href="#booking" class="hidden md:inline-block px-5 py-2 text-xs uppercase tracking-widest font-semibold bg-gold text-black rounded-full hover:shadow-gold transition shadow-lg btn-ripple">Book Now</a>
-        <button id="menuToggle" class="text-2xl text-white/80 hover:text-gold transition md:hidden">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-
-    <!-- HERO CONTENT (centered) -->
-    <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-      <div class="max-w-4xl mx-auto">
-        <p class="text-gold text-sm tracking-[0.4em] uppercase font-sans mb-4 animate-pulse">Hazaribagh's Finest</p>
-        <h1 class="hero-title text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.1]">
-          Transform Your <br class="hidden sm:block" />
-          <span class="text-gold">Style</span> Into Art
-        </h1>
-        <p class="hero-sub text-base md:text-xl text-white/70 max-w-2xl mx-auto mt-6 font-light leading-relaxed">
-          Where elegance meets precision — experience a new standard of luxury grooming.
-        </p>
-        <div class="flex flex-wrap justify-center gap-4 mt-10">
-          <a href="#booking" class="px-8 py-4 bg-gold text-black rounded-full font-semibold tracking-wide shadow-lg hover:shadow-gold transition btn-ripple">Book Appointment</a>
-          <a href="#services" class="px-8 py-4 glass text-white rounded-full font-semibold tracking-wide border border-white/10 hover:border-gold/50 transition">Explore Services</a>
-        </div>
-      </div>
-      <!-- scroll indicator -->
-      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/40 animate-bounce">
-        <i class="fas fa-chevron-down text-xl"></i>
-      </div>
+    <!-- ===== LOADING SCREEN ===== -->
+    <div id="loader" aria-hidden="true">
+        <div class="loader-ring"></div>
+        <span class="loader-text">OSMO</span>
     </div>
-  </header>
 
-  <!-- ===== MAIN ===== -->
-  <main class="bg-[#0F0F0F]">
+    <!-- ===== HEADER ===== -->
+    <header class="navbar-custom" id="mainHeader" role="navigation" aria-label="Main Navigation">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#home">
+                    OSMO<span>MODERN</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Price List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#offers">Offers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">Booking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="header-actions ms-lg-3 mt-3 mt-lg-0">
+                    <a href="tel:+917979071560" class="btn-call" aria-label="Call Now">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/917979071560" target="_blank" class="btn-whatsapp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
 
-    <!-- ===== SERVICES ===== -->
-    <section id="services" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="text-gold text-xs tracking-[0.3em] uppercase font-sans">Excellence</span>
-        <h2 class="text-4xl md:text-5xl font-display text-white mt-2">Signature Services</h2>
-        <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        <!-- card 1 -->
-        <div class="service-card-glow rounded-2xl p-6 tilt-card group">
-          <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-gold text-2xl mb-5">
-            <i class="fas fa-cut"></i>
-          </div>
-          <h3 class="text-2xl font-display text-white">Haircut &amp; Styling</h3>
-          <p class="text-white/60 text-sm mt-2 leading-relaxed">Precision cuts tailored to your face shape, with a modern edge.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-gold font-semibold">₹499+</span>
-            <a href="#booking" class="text-sm text-white/70 hover:text-gold transition"><i class="fas fa-arrow-right"></i> Book</a>
-          </div>
-        </div>
-        <!-- card 2 -->
-        <div class="service-card-glow rounded-2xl p-6 tilt-card group">
-          <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-gold text-2xl mb-5">
-            <i class="fas fa-beard"></i>
-          </div>
-          <h3 class="text-2xl font-display text-white">Beard Grooming</h3>
-          <p class="text-white/60 text-sm mt-2 leading-relaxed">Expert shaping, hot towel shaves, and premium oils.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-gold font-semibold">₹349+</span>
-            <a href="#booking" class="text-sm text-white/70 hover:text-gold transition"><i class="fas fa-arrow-right"></i> Book</a>
-          </div>
-        </div>
-        <!-- card 3 -->
-        <div class="service-card-glow rounded-2xl p-6 tilt-card group">
-          <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-gold text-2xl mb-5">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3 class="text-2xl font-display text-white">Hair Coloring</h3>
-          <p class="text-white/60 text-sm mt-2 leading-relaxed">Vibrant, long-lasting color with luxury brands.</p>
-          <div class="flex items-center justify-between mt-5">
-            <span class="text-gold font-semibold">₹799+</span>
-            <a href="#booking" class="text-sm text-white/70 hover:text-gold transition"><i class="fas fa-arrow-right"></i> Book</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT (split layout + counter) ===== -->
-    <section id="about" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div class="order-2 md:order-1">
-          <span class="text-gold text-xs tracking-[0.3em] uppercase font-sans">About Osmo</span>
-          <h2 class="text-4xl md:text-5xl font-display text-white mt-2">Where Art Meets <br class="hidden sm:block" />Precision</h2>
-          <p class="text-white/60 mt-6 leading-relaxed">
-            Welcome to OSMO MODERN SALON, Hazaribagh's premier destination for contemporary hair styling and grooming. Our team of experienced stylists blends modern techniques with personalized care to enhance your natural beauty.
-          </p>
-          <p class="text-white/60 mt-4 leading-relaxed">
-            Relax in our chic space with live music, and let us craft a look that's uniquely you.
-          </p>
-          <div class="grid grid-cols-3 gap-4 mt-8">
-            <div><span class="text-3xl font-display text-gold counter" data-target="1200">0</span><span class="text-gold text-3xl">+</span><p class="text-white/40 text-xs uppercase tracking-wider">Happy Clients</p></div>
-            <div><span class="text-3xl font-display text-gold counter" data-target="8">0</span><span class="text-gold text-3xl">+</span><p class="text-white/40 text-xs uppercase tracking-wider">Awards</p></div>
-            <div><span class="text-3xl font-display text-gold counter" data-target="3">0</span><span class="text-gold text-3xl">+</span><p class="text-white/40 text-xs uppercase tracking-wider">Branches</p></div>
-          </div>
-        </div>
-        <div class="order-1 md:order-2 reveal-img rounded-2xl overflow-hidden shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1519735777090-ec97162dc266?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salon interior" class="w-full h-auto object-cover" loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== GALLERY (Masonry style with filters) ===== -->
-    <section id="gallery" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-      <div class="text-center mb-12">
-        <span class="text-gold text-xs tracking-[0.3em] uppercase font-sans">Portfolio</span>
-        <h2 class="text-4xl md:text-5xl font-display text-white mt-2">Our Gallery</h2>
-        <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-      </div>
-      <!-- filters (simple) -->
-      <div class="flex flex-wrap justify-center gap-3 mb-10">
-        <button class="filter-btn px-5 py-2 text-sm rounded-full border border-white/10 text-white/70 hover:border-gold hover:text-gold transition" data-filter="all">All</button>
-        <button class="filter-btn px-5 py-2 text-sm rounded-full border border-white/10 text-white/70 hover:border-gold hover:text-gold transition" data-filter="cut">Haircut</button>
-        <button class="filter-btn px-5 py-2 text-sm rounded-full border border-white/10 text-white/70 hover:border-gold hover:text-gold transition" data-filter="color">Color</button>
-        <button class="filter-btn px-5 py-2 text-sm rounded-full border border-white/10 text-white/70 hover:border-gold hover:text-gold transition" data-filter="beard">Beard</button>
-      </div>
-      <!-- grid -->
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 gallery-grid">
-        <div class="gallery-item" data-category="cut"><img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-56 object-cover hover:scale-105 transition duration-700" loading="lazy" /></div>
-        <div class="gallery-item" data-category="color"><img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-64 object-cover hover:scale-105 transition duration-700" loading="lazy" /></div>
-        <div class="gallery-item" data-category="beard"><img src="https://images.unsplash.com/photo-1536599424071-0b215a388ba7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-48 object-cover hover:scale-105 transition duration-700" loading="lazy" /></div>
-        <div class="gallery-item" data-category="cut"><img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-72 object-cover hover:scale-105 transition duration-700" loading="lazy" /></div>
-        <div class="gallery-item" data-category="color"><img src="https://images.unsplash.com/photo-1522336572464-97b3e5ccd96b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-56 object-cover hover:scale-105 transition duration-700" loading="lazy" /></div>
-        <div class="gallery-item" data-category="beard"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="rounded-xl w-full h-64 object-cover hover:scale-105 transition duration-700" loading="lazy" /></div>
-      </div>
-    </section>
-
-    <!-- ===== TESTIMONIALS (Swiper 3D glass) ===== -->
-    <section id="testimonials" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-      <div class="text-center mb-12">
-        <span class="text-gold text-xs tracking-[0.3em] uppercase font-sans">Testimonials</span>
-        <h2 class="text-4xl md:text-5xl font-display text-white mt-2">What Clients Say</h2>
-        <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-      </div>
-      <div class="swiper testimonial-swiper overflow-hidden">
+<!-- ===== HERO SLIDER ===== -->
+<section id="home" class="hero-slider" aria-label="Hero Banner">
+    <div class="swiper heroSwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><div class="testimonial-card"><div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="text-white/80 text-sm leading-relaxed">"Absolutely transformative! The team at OSMO gave me a look that turned heads. Pure luxury."</p><div class="flex items-center gap-3 mt-4"><img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full object-cover" /><div><p class="text-white text-sm font-medium">Ananya Sharma</p><p class="text-white/40 text-xs">Regular Client</p></div></div></div></div>
-          <div class="swiper-slide"><div class="testimonial-card"><div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="text-white/80 text-sm leading-relaxed">"Best beard grooming in Hazaribagh. The hot towel shave is an experience in itself."</p><div class="flex items-center gap-3 mt-4"><img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full object-cover" /><div><p class="text-white text-sm font-medium">Rahul Verma</p><p class="text-white/40 text-xs">Beard Enthusiast</p></div></div></div></div>
-          <div class="swiper-slide"><div class="testimonial-card"><div class="flex text-gold mb-3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="text-white/80 text-sm leading-relaxed">"The ambiance, the music, the precision — OSMO is a gem. My go-to salon."</p><div class="flex items-center gap-3 mt-4"><img src="https://randomuser.me/api/portraits/women/63.jpg" class="w-10 h-10 rounded-full object-cover" /><div><p class="text-white text-sm font-medium">Priya Singh</p><p class="text-white/40 text-xs">Loyal Customer</p></div></div></div></div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=1600&q=80');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="badge-gold">Premium Grooming</span>
+                    <h1>Experience <span class="highlight">Premium</span> Grooming</h1>
+                    <p>Hair &bull; Beard &bull; Facial &bull; Spa</p>
+                    <div class="btn-group-hero">
+                        <a href="#booking" class="btn btn-gold">
+                            <i class="fas fa-calendar-check"></i> Book Appointment
+                        </a>
+                        <a href="tel:+917979071560" class="btn btn-outline-gold">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1560066984-138ad7cfba53?w=1600&q=80');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="badge-gold">Expert Stylists</span>
+                    <h1>Style That <span class="highlight">Defines</span> You</h1>
+                    <p>Professional haircuts &amp; beard styling by expert barbers</p>
+                    <div class="btn-group-hero">
+                        <a href="#booking" class="btn btn-gold">
+                            <i class="fas fa-calendar-check"></i> Book Appointment
+                        </a>
+                        <a href="tel:+917979071560" class="btn btn-outline-gold">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=1600&q=80');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="badge-gold">Luxury Experience</span>
+                    <h1>Relax. Rejuvenate. <span class="highlight">Repeat.</span></h1>
+                    <p>Premium hair spa, facials &amp; grooming packages</p>
+                    <div class="btn-group-hero">
+                        <a href="#booking" class="btn btn-gold">
+                            <i class="fas fa-calendar-check"></i> Book Appointment
+                        </a>
+                        <a href="tel:+917979071560" class="btn btn-outline-gold">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1600&q=80');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="badge-gold">Modern Salon</span>
+                    <h1>Where <span class="highlight">Style</span> Meets Comfort</h1>
+                    <p>AC waiting area &bull; Sanitized equipment &bull; Premium products</p>
+                    <div class="btn-group-hero">
+                        <a href="#booking" class="btn btn-gold">
+                            <i class="fas fa-calendar-check"></i> Book Appointment
+                        </a>
+                        <a href="tel:+917979071560" class="btn btn-outline-gold">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="swiper-slide">
+                <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=1600&q=80');"></div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="badge-gold">Bridal &amp; Groom</span>
+                    <h1>Your <span class="highlight">Special Day</span> Deserves The Best</h1>
+                    <p>Bridal groom packages &amp; premium grooming services</p>
+                    <div class="btn-group-hero">
+                        <a href="#booking" class="btn btn-gold">
+                            <i class="fas fa-calendar-check"></i> Book Appointment
+                        </a>
+                        <a href="tel:+917979071560" class="btn btn-outline-gold">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="swiper-pagination !relative mt-8"></div>
-      </div>
-    </section>
-
-    <!-- ===== BOOKING (luxury form) ===== -->
-    <section id="booking" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-      <div class="text-center mb-12">
-        <span class="text-gold text-xs tracking-[0.3em] uppercase font-sans">Reserve</span>
-        <h2 class="text-4xl md:text-5xl font-display text-white mt-2">Book Your Experience</h2>
-        <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-      </div>
-      <div class="max-w-3xl mx-auto glass rounded-3xl p-8 md:p-12">
-        <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="md:col-span-2"><label class="block text-white/60 text-sm mb-1">Full Name</label><input type="text" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition" placeholder="Your name" required /></div>
-          <div><label class="block text-white/60 text-sm mb-1">Phone</label><input type="tel" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition" placeholder="+91" required /></div>
-          <div><label class="block text-white/60 text-sm mb-1">Service</label><select class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition"><option>Haircut & Styling</option><option>Beard Grooming</option><option>Hair Coloring</option></select></div>
-          <div><label class="block text-white/60 text-sm mb-1">Date</label><input type="date" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition" /></div>
-          <div><label class="block text-white/60 text-sm mb-1">Time</label><input type="time" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition" /></div>
-          <div class="md:col-span-2"><label class="block text-white/60 text-sm mb-1">Preferred Stylist</label><select class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-gold focus:outline-none transition"><option>Any</option><option>Md. Maruph</option><option>Senior Stylist</option></select></div>
-          <div class="md:col-span-2"><button type="submit" class="w-full py-4 bg-gold text-black font-semibold rounded-full hover:shadow-gold transition btn-ripple">Confirm Appointment</button></div>
-        </form>
-        <div id="bookingSuccess" class="hidden mt-6 text-center text-gold"><i class="fas fa-check-circle text-3xl"></i><p class="text-white/80 mt-2">Your appointment is confirmed! We'll call you shortly.</p></div>
-      </div>
-    </section>
-
-    <!-- ===== CONTACT + MAP ===== -->
-    <section id="contact" class="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-      <div class="text-center mb-12">
-        <span class="text-gold text-xs tracking-[0.3em] uppercase font-sans">Visit Us</span>
-        <h2 class="text-4xl md:text-5xl font-display text-white mt-2">Get in Touch</h2>
-        <div class="w-16 h-1 bg-gold mx-auto mt-4 rounded-full"></div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="glass rounded-3xl p-8 space-y-6">
-          <div><i class="fas fa-map-pin text-gold text-xl mr-3"></i><span class="text-white/80">Pugmil Rd, near Kallu Chowk V-Mart, Hazaribagh – 825301</span></div>
-          <div><i class="fas fa-phone-alt text-gold text-xl mr-3"></i><span class="text-white/80">079790 71560</span></div>
-          <div><i class="fab fa-instagram text-gold text-xl mr-3"></i><span class="text-white/80">@osmo.modern.salon</span></div>
-          <div><i class="fab fa-whatsapp text-gold text-xl mr-3"></i><span class="text-white/80">+91 79790 71560</span></div>
-          <div class="pt-4 border-t border-white/10"><p class="text-white/60 text-sm"><i class="far fa-clock mr-2"></i>Mon–Sun: 8:00 AM – 10:00 PM</p></div>
-        </div>
-        <div class="rounded-3xl overflow-hidden h-64 md:h-auto">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.234567!2d85.361!3d24.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDAwJzAwLjAiTiA4NcKwMjEnMzkuNiJF!5e0!3m2!1sen!2sin!4v1710000000000" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER (luxury) ===== -->
-  <footer class="footer-gradient border-t border-white/5 px-6 md:px-12 py-16">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-      <div><span class="text-3xl font-display text-gold">OSMO</span><p class="text-white/40 text-sm mt-2">Modern Salon · Hazaribagh</p><div class="flex gap-4 mt-4"><a href="#" class="text-white/40 hover:text-gold transition"><i class="fab fa-instagram"></i></a><a href="#" class="text-white/40 hover:text-gold transition"><i class="fab fa-facebook-f"></i></a><a href="#" class="text-white/40 hover:text-gold transition"><i class="fab fa-whatsapp"></i></a></div></div>
-      <div><h4 class="text-white font-display text-lg">Quick</h4><ul class="text-white/40 text-sm space-y-2 mt-3"><li><a href="#hero" class="hover:text-gold transition">Home</a></li><li><a href="#services" class="hover:text-gold transition">Services</a></li><li><a href="#about" class="hover:text-gold transition">About</a></li></ul></div>
-      <div><h4 class="text-white font-display text-lg">Support</h4><ul class="text-white/40 text-sm space-y-2 mt-3"><li><a href="#booking" class="hover:text-gold transition">Book</a></li><li><a href="#contact" class="hover:text-gold transition">Contact</a></li><li><a href="#" class="hover:text-gold transition">FAQ</a></li></ul></div>
-      <div><h4 class="text-white font-display text-lg">Newsletter</h4><p class="text-white/40 text-sm mt-3">Get exclusive offers.</p><div class="flex mt-3"><input type="email" placeholder="Your email" class="bg-white/5 border border-white/10 rounded-l-xl px-4 py-2 text-sm text-white flex-1 focus:outline-none" /><button class="bg-gold text-black px-4 rounded-r-xl text-sm font-semibold">Join</button></div></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
-    <div class="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/5 text-center text-white/30 text-xs">© 2026 OSMO MODERN SALON · All rights reserved.</div>
-  </footer>
+</section>
 
-  <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
-  <a href="https://wa.me/917979071560" target="_blank" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
+<!-- ===== ABOUT ===== -->
+<section id="about" class="section-padding" style="background: rgba(0,0,0,0.3);">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="about-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80" alt="OSMO MODERN SALON Interior" loading="lazy" />
+                    <div class="about-badge">
+                        <h4>10+</h4>
+                        <p>Years of Excellence</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <span class="section-subtitle">About Us</span>
+                <h2 class="section-title">Welcome to <br />OSMO MODERN SALON</h2>
+                <div class="section-divider" style="margin-left:0;"></div>
+                <p style="color:var(--text-muted); font-size:1.05rem;">
+                    OSMO MODERN SALON is one of the most trusted premium salons in Hazaribagh offering stylish haircuts,
+                    beard styling, facials, hair spa, coloring, grooming packages and premium salon services.
+                </p>
+                <div class="about-features">
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Professional Staff</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Premium Products</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Clean Environment</div>
+                    <div class="feature-item"><i class="fas fa-check-circle"></i> Affordable Pricing</div>
+                </div>
+                <a href="#booking" class="btn btn-gold mt-4">
+                    <i class="fas fa-calendar-check"></i> Book Now
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- ===== BACK TO TOP ===== -->
-  <button id="backTop" class="fixed bottom-24 right-6 z-50 w-12 h-12 glass rounded-full text-gold border border-white/10 hover:border-gold transition opacity-0 pointer-events-none"><i class="fas fa-arrow-up"></i></button>
+<!-- ===== WHY CHOOSE US ===== -->
+<section id="why" class="section-padding-sm" style="background: var(--darker);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Why Choose Us</span>
+            <h2 class="section-title">The OSMO Experience</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="0">
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-cut"></i></div>
+                    <h5>Experienced Barbers</h5>
+                    <p>Skilled professionals with years of expertise</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-flask"></i></div>
+                    <h5>Premium Products</h5>
+                    <p>Top-quality brands for the best results</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-tag"></i></div>
+                    <h5>Affordable Price</h5>
+                    <p>Luxury services at competitive rates</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="300">
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-wind"></i></div>
+                    <h5>AC Waiting Area</h5>
+                    <p>Comfortable &amp; relaxing atmosphere</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="400">
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-shield-alt"></i></div>
+                    <h5>Sanitized Equipment</h5>
+                    <p>Hygiene &amp; safety are our priority</p>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="500">
+                <div class="why-card">
+                    <div class="icon-wrap"><i class="fas fa-calendar-check"></i></div>
+                    <h5>Online Booking</h5>
+                    <p>Easy appointment scheduling at your fingertips</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- ===== SCRIPTS ===== -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.3/dist/lenis.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<!-- ===== SERVICES ===== -->
+<section id="services" class="section-padding" style="background: rgba(0,0,0,0.25);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Our Services</span>
+            <h2 class="section-title">Premium Grooming Services</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row g-4 mt-2">
+            <!-- Service cards -->
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=400&q=80" alt="Hair Cut" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Hair Cut</h5>
+                        <span class="price-tag">₹150</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80" alt="Beard Trim" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Beard Trim</h5>
+                        <span class="price-tag">₹80</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=400&q=80" alt="Hair Spa" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Hair Spa</h5>
+                        <span class="price-tag">₹499</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1560066984-138ad7cfba53?w=400&q=80" alt="Hair Color" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Hair Color</h5>
+                        <span class="price-tag">₹699</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80" alt="Facial" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Facial</h5>
+                        <span class="price-tag">₹699</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1556229161-31f999c6487f?w=400&q=80" alt="Cleanup" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Cleanup</h5>
+                        <span class="price-tag">₹399</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1519415387722-a1c3bb167916?w=400&q=80" alt="D-Tan" loading="lazy" />
+                    <div class="service-body">
+                        <h5>D-Tan</h5>
+                        <span class="price-tag">₹599</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&q=80" alt="Head Massage" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Head Massage</h5>
+                        <span class="price-tag">₹199</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=400&q=80" alt="Shaving" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Shaving</h5>
+                        <span class="price-tag">₹100</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?w=400&q=80" alt="Kids Haircut" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Kids Haircut</h5>
+                        <span class="price-tag">₹120</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="1000">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&q=80" alt="Bridal Groom" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Bridal Groom</h5>
+                        <span class="price-tag">₹2999</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up" data-aos-delay="1100">
+                <div class="service-card">
+                    <img class="service-img" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71a9?w=400&q=80" alt="Groom Package" loading="lazy" />
+                    <div class="service-body">
+                        <h5>Groom Package</h5>
+                        <span class="price-tag">₹1499</span>
+                        <a href="#booking" class="btn btn-gold btn-gold-sm btn-book">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
+<!-- ===== PRICE LIST ===== -->
+<section id="pricing" class="section-padding" style="background: var(--darker);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Pricing</span>
+            <h2 class="section-title">Our Price List</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing-table">
+                    <div class="pricing-item"><span class="service-name">Hair Cut</span><span class="service-price"><span class="currency">₹</span>150</span></div>
+                    <div class="pricing-item"><span class="service-name">Hair Cut Premium</span><span class="service-price"><span class="currency">₹</span>250</span></div>
+                    <div class="pricing-item"><span class="service-name">Beard</span><span class="service-price"><span class="currency">₹</span>80</span></div>
+                    <div class="pricing-item"><span class="service-name">Shaving</span><span class="service-price"><span class="currency">₹</span>100</span></div>
+                    <div class="pricing-item"><span class="service-name">Hair Spa</span><span class="service-price"><span class="currency">₹</span>499</span></div>
+                    <div class="pricing-item"><span class="service-name">Facial</span><span class="service-price"><span class="currency">₹</span>699</span></div>
+                    <div class="pricing-item"><span class="service-name">Cleanup</span><span class="service-price"><span class="currency">₹</span>399</span></div>
+                    <div class="pricing-item"><span class="service-name">Hair Coloring</span><span class="service-price"><span class="currency">₹</span>699</span></div>
+                    <div class="pricing-item"><span class="service-name">Head Massage</span><span class="service-price"><span class="currency">₹</span>199</span></div>
+                    <div class="pricing-item"><span class="service-name">Kids Haircut</span><span class="service-price"><span class="currency">₹</span>120</span></div>
+                    <div class="pricing-item"><span class="service-name">D Tan</span><span class="service-price"><span class="currency">₹</span>599</span></div>
+                    <div class="pricing-item"><span class="service-name">Groom Package</span><span class="service-price"><span class="currency">₹</span>1499</span></div>
+                    <div class="pricing-item"><span class="service-name">Bridal Groom</span><span class="service-price"><span class="currency">₹</span>2999</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-      // ---- LOADER ----
-      setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-      }, 800);
+<!-- ===== SPECIAL OFFERS ===== -->
+<section id="offers" class="section-padding" style="background: rgba(0,0,0,0.25);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Special Offers</span>
+            <h2 class="section-title">Exclusive Deals</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-6 col-md-4" data-aos="flip-up" data-aos-delay="0">
+                <div class="offer-card">
+                    <span class="offer-badge">20% OFF</span>
+                    <div class="offer-icon"><i class="fas fa-spa"></i></div>
+                    <h5>Hair Spa</h5>
+                    <p class="offer-desc">Rejuvenate your hair with our premium spa</p>
+                    <a href="#booking" class="btn btn-gold btn-gold-sm mt-2">Book Now</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4" data-aos="flip-up" data-aos-delay="150">
+                <div class="offer-card">
+                    <span class="offer-badge">FREE</span>
+                    <div class="offer-icon"><i class="fas fa-beard"></i></div>
+                    <h5>Free Beard Trim</h5>
+                    <p class="offer-desc">On every Premium Haircut booking</p>
+                    <a href="#booking" class="btn btn-gold btn-gold-sm mt-2">Book Now</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4" data-aos="flip-up" data-aos-delay="300">
+                <div class="offer-card">
+                    <span class="offer-badge">STUDENT</span>
+                    <div class="offer-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h5>Student Discount</h5>
+                    <p class="offer-desc">10% off on all services with valid ID</p>
+                    <a href="#booking" class="btn btn-gold btn-gold-sm mt-2">Book Now</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4" data-aos="flip-up" data-aos-delay="450">
+                <div class="offer-card">
+                    <span class="offer-badge">FESTIVE</span>
+                    <div class="offer-icon"><i class="fas fa-gift"></i></div>
+                    <h5>Festival Offers</h5>
+                    <p class="offer-desc">Special packages during festive seasons</p>
+                    <a href="#booking" class="btn btn-gold btn-gold-sm mt-2">Book Now</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4" data-aos="flip-up" data-aos-delay="600">
+                <div class="offer-card">
+                    <span class="offer-badge">COMBO</span>
+                    <div class="offer-icon"><i class="fas fa-calendar-week"></i></div>
+                    <h5>Weekend Combo</h5>
+                    <p class="offer-desc">Hair Cut + Beard at just ₹199</p>
+                    <a href="#booking" class="btn btn-gold btn-gold-sm mt-2">Book Now</a>
+                </div>
+            </div>
+            <div class="col-6 col-md-4" data-aos="flip-up" data-aos-delay="750">
+                <div class="offer-card">
+                    <span class="offer-badge">NEW</span>
+                    <div class="offer-icon"><i class="fas fa-star"></i></div>
+                    <h5>First Visit Offer</h5>
+                    <p class="offer-desc">15% off on your first appointment</p>
+                    <a href="#booking" class="btn btn-gold btn-gold-sm mt-2">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-      // ---- LENIS SMOOTH SCROLL ----
-      const lenis = new Lenis({
-        duration: 1.2,
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        smoothWheel: true,
-      });
-      lenis.on('scroll', ScrollTrigger.update);
-      gsap.ticker.add((time) => lenis.raf(time * 1000));
-      gsap.ticker.lagSmoothing(0);
+<!-- ===== GALLERY ===== -->
+<section id="gallery" class="section-padding" style="background: var(--darker);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Gallery</span>
+            <h2 class="section-title">Our Work</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="gallery-masonry mt-3" data-aos="fade-up" data-aos-delay="100">
+            <!-- 12 gallery items -->
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=600&q=80" alt="Salon Gallery 1" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80" alt="Salon Gallery 2" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&q=80" alt="Salon Gallery 3" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Salon Gallery 4" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=600&q=80" alt="Salon Gallery 5" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&q=80" alt="Salon Gallery 6" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1560066984-138ad7cfba53?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1560066984-138ad7cfba53?w=600&q=80" alt="Salon Gallery 7" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1556229161-31f999c6487f?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1556229161-31f999c6487f?w=600&q=80" alt="Salon Gallery 8" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1519415387722-a1c3bb167916?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1519415387722-a1c3bb167916?w=600&q=80" alt="Salon Gallery 9" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&q=80" alt="Salon Gallery 10" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1616394584738-fc6e612e71a9?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71a9?w=600&q=80" alt="Salon Gallery 11" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+            <div class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?w=600&q=80">
+                <img src="https://images.unsplash.com/photo-1522336572468-97b06e8ef143?w=600&q=80" alt="Salon Gallery 12" loading="lazy" />
+                <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-      // ---- SCROLL PROGRESS ----
-      const progress = document.getElementById('scroll-progress');
-      window.addEventListener('scroll', () => {
-        const scroll = window.scrollY;
-        const height = document.documentElement.scrollHeight - window.innerHeight;
-        progress.style.width = (scroll / height) * 100 + '%';
-      });
+<!-- ===== CUSTOMER REVIEWS ===== -->
+<section id="reviews" class="section-padding" style="background: rgba(0,0,0,0.25);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Testimonials</span>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="section-divider"></div>
+        </div>
 
-      // ---- NAVBAR SCROLL EFFECT ----
-      const navbar = document.getElementById('navbar');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 80) {
-          navbar.classList.add('bg-black/80', 'backdrop-blur-xl');
-        } else {
-          navbar.classList.remove('bg-black/80', 'backdrop-blur-xl');
-        }
-      });
+        <!-- Google Rating -->
+        <div class="google-rating-box" data-aos="zoom-in">
+            <div class="big-stars">★★★★★</div>
+            <div class="rating-number">3.7</div>
+            <div class="rating-label">⭐ 7 Google Reviews</div>
+        </div>
 
-      // ---- MOBILE MENU ----
-      const menuToggle = document.getElementById('menuToggle');
-      const closeMenu = document.getElementById('closeMenu');
-      const mobileMenu = document.getElementById('mobileMenu');
-      menuToggle.addEventListener('click', () => mobileMenu.classList.add('open'));
-      closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
-      document.querySelectorAll('.menu-link').forEach(link => {
-        link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-      });
+        <!-- Reviews Slider -->
+        <div class="swiper reviewsSwiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Amazing experience! The barbers are highly skilled and the ambiance is top-notch. Best salon in Hazaribagh!"</p>
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Customer" loading="lazy" />
+                            <div><div class="name">Rahul Sharma</div><div class="role">Regular Customer</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"I love the hair spa and facial services. Premium products and professional staff. Highly recommended!"</p>
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Customer" loading="lazy" />
+                            <div><div class="name">Priya Singh</div><div class="role">Regular Customer</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"The groom package was fantastic! Got the perfect look for my wedding. Thank you OSMO MODERN SALON!"</p>
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=3" alt="Customer" loading="lazy" />
+                            <div><div class="name">Vikram Kumar</div><div class="role">Bridal Groom</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"Clean environment, friendly staff, and affordable pricing. My go-to salon for haircuts and beard trimming."</p>
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=7" alt="Customer" loading="lazy" />
+                            <div><div class="name">Amit Patel</div><div class="role">Regular Customer</div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"The kids haircut service is wonderful! My son loves coming here. Professional and patient with children."</p>
+                        <div class="review-author">
+                            <img src="https://i.pravatar.cc/100?img=10" alt="Customer" loading="lazy" />
+                            <div><div class="name">Neha Gupta</div><div class="role">Parent</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination reviews-pagination"></div>
+        </div>
+    </div>
+</section>
 
-      // ---- GSAP REVEALS ----
-      gsap.registerPlugin(ScrollTrigger);
+<!-- ===== BOOKING ===== -->
+<section id="booking" class="section-padding" style="background: var(--darker);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Book Now</span>
+            <h2 class="section-title">Schedule Your Appointment</h2>
+            <div class="section-divider"></div>
+            <p style="color:var(--text-muted); max-width:600px; margin:0 auto 30px;">
+                Fill in your details and we'll confirm your booking instantly via WhatsApp.
+            </p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <form class="booking-form" id="bookingForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label" for="custName">Full Name <span class="text-gold">*</span></label>
+                            <input type="text" class="form-control" id="custName" placeholder="Your full name" required />
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="custPhone">Phone Number <span class="text-gold">*</span></label>
+                            <input type="tel" class="form-control" id="custPhone" placeholder="+91 98765 43210" required />
+                            <div class="invalid-feedback">Please enter a valid phone number.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="custEmail">Email</label>
+                            <input type="email" class="form-control" id="custEmail" placeholder="your@email.com" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="custService">Service <span class="text-gold">*</span></label>
+                            <select class="form-select" id="custService" required>
+                                <option value="">Select Service</option>
+                                <option value="Hair Cut">Hair Cut</option>
+                                <option value="Hair Cut Premium">Hair Cut Premium</option>
+                                <option value="Beard Trim">Beard Trim</option>
+                                <option value="Shaving">Shaving</option>
+                                <option value="Hair Spa">Hair Spa</option>
+                                <option value="Facial">Facial</option>
+                                <option value="Cleanup">Cleanup</option>
+                                <option value="Hair Coloring">Hair Coloring</option>
+                                <option value="Head Massage">Head Massage</option>
+                                <option value="Kids Haircut">Kids Haircut</option>
+                                <option value="D Tan">D Tan</option>
+                                <option value="Groom Package">Groom Package</option>
+                                <option value="Bridal Groom">Bridal Groom</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a service.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="custDate">Date <span class="text-gold">*</span></label>
+                            <input type="date" class="form-control" id="custDate" required />
+                            <div class="invalid-feedback">Please select a date.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="custTime">Time Slot <span class="text-gold">*</span></label>
+                            <select class="form-select" id="custTime" required>
+                                <option value="">Select Time</option>
+                                <option value="08:00 AM">08:00 AM</option>
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="01:00 PM">01:00 PM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                                <option value="05:00 PM">05:00 PM</option>
+                                <option value="06:00 PM">06:00 PM</option>
+                                <option value="07:00 PM">07:00 PM</option>
+                                <option value="08:00 PM">08:00 PM</option>
+                                <option value="09:00 PM">09:00 PM</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a time slot.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="custBarber">Preferred Barber</label>
+                            <select class="form-select" id="custBarber">
+                                <option value="Any">Any</option>
+                                <option value="Barber Raj">Barber Raj</option>
+                                <option value="Barber Amit">Barber Amit</option>
+                                <option value="Barber Vikram">Barber Vikram</option>
+                                <option value="Barber Sanjay">Barber Sanjay</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label" for="custNotes">Special Notes</label>
+                            <input type="text" class="form-control" id="custNotes" placeholder="Any special requests..." />
+                        </div>
+                        <div class="col-12 mt-3">
+                            <button type="submit" class="btn btn-gold btn-submit">
+                                <i class="fab fa-whatsapp"></i> Book Appointment via WhatsApp
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
-      // Hero text reveal
-      gsap.from('.hero-title', { opacity: 0, y: 80, duration: 1.2, delay: 0.3, ease: 'power3.out' });
-      gsap.from('.hero-sub', { opacity: 0, y: 40, duration: 1, delay: 0.6, ease: 'power3.out' });
-      gsap.from('.hero-content .btn-ripple', { opacity: 0, y: 30, duration: 0.8, delay: 0.9, stagger: 0.15, ease: 'power3.out' });
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section-padding-sm" style="background: rgba(0,0,0,0.15);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">FAQ</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row justify-content-center mt-3">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What services do you offer?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">We offer a wide range of grooming services including haircuts, beard trimming, shaving, hair spa, facials, cleanup, hair coloring, head massage, D-Tan, kids haircut, bridal groom, and groom packages.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do I need to book an appointment?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Yes, we recommend booking an appointment in advance to ensure availability, especially for premium services and weekend slots. You can book directly through our website or WhatsApp.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What are your working hours?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">We are open Monday through Sunday from 08:00 AM to 09:30 PM. We're here to serve you every day of the week.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do you offer discounts for students?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">Yes, we offer a 10% student discount on all services with a valid student ID. Please mention this when booking your appointment.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What safety measures do you follow?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">We maintain the highest hygiene standards with sanitized equipment, disposable liners, regular disinfection, and a clean AC waiting area. Your safety is our priority.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-      // Services cards
-      gsap.utils.toArray('.service-card-glow').forEach((card, i) => {
-        gsap.from(card, {
-          scrollTrigger: { trigger: card, toggleActions: 'play none none none', start: 'top 85%' },
-          opacity: 0,
-          y: 50,
-          duration: 0.8,
-          delay: i * 0.12,
-          ease: 'power3.out'
-        });
-      });
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section-padding" style="background: var(--darker);">
+    <div class="container">
+        <div class="text-center" data-aos="fade-up">
+            <span class="section-subtitle">Get in Touch</span>
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-divider"></div>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-md-6" data-aos="fade-right">
+                <div class="contact-info-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-text">
+                        <h6>Address</h6>
+                        <p>
+                            OSMO MODERN SALON<br />
+                            Pugmil Rd, Near Kallu Chowk V-Mart,<br />
+                            Friends Colony, Pugmil,<br />
+                            Hazaribagh, Jharkhand 825301
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-info-card mt-3">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text">
+                        <h6>Phone</h6>
+                        <p><a href="tel:+917979071560">+91 79790 71560</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-card mt-3">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="contact-text">
+                        <h6>Working Hours</h6>
+                        <p>Monday - Sunday<br />08:00 AM - 09:30 PM</p>
+                    </div>
+                </div>
+                <div class="contact-info-card mt-3">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <h6>Email</h6>
+                        <p><a href="mailto:contact@osmomodernsalon.in">contact@osmomodernsalon.in</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+                <div class="map-container">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2359.123456789!2d85.3614!3d23.9884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDU5JzE4LjIiTiA4NcKwMjEnNDEuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                title="OSMO MODERN SALON Location"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 
-      // About counter (simple)
-      const counters = document.querySelectorAll('.counter');
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const target = parseInt(el.dataset.target);
-            let current = 0;
-            const step = Math.ceil(target / 60);
-            const interval = setInterval(() => {
-              current += step;
-              if (current >= target) { current = target;
-                clearInterval(interval); }
-              el.textContent = current.toLocaleString();
-            }, 25);
-            observer.unobserve(el);
-          }
-        });
-      }, { threshold: 0.5 });
-      counters.forEach(c => observer.observe(c));
+<!-- ===== NEWSLETTER ===== -->
+<section id="newsletter" class="section-padding-sm" style="background: rgba(0,0,0,0.2);">
+    <div class="container">
+        <div class="newsletter-wrap" data-aos="fade-up">
+            <h4 style="font-weight:700;">Subscribe to Our Newsletter</h4>
+            <p style="color:var(--text-muted);">Stay updated with our latest offers and grooming tips.</p>
+            <div class="input-group">
+                <input type="email" class="form-control" placeholder="Enter your email address" id="newsletterEmail" />
+                <button class="btn btn-gold" onclick="subscribeNewsletter()">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</section>
 
-      // Gallery filter
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const filter = btn.dataset.filter;
-          document.querySelectorAll('.gallery-item').forEach(item => {
-            if (filter === 'all' || item.dataset.category === filter) {
-              item.style.display = 'block';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('border-gold', 'text-gold'));
-          btn.classList.add('border-gold', 'text-gold');
-        });
-      });
-      // default active
-      document.querySelector('.filter-btn[data-filter="all"]')?.classList.add('border-gold', 'text-gold');
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <h5>OSMO MODERN SALON</h5>
+                <p style="color:var(--text-muted); font-size:0.9rem;">
+                    Premium grooming services in Hazaribagh. Experience luxury, style, and comfort at our modern salon.
+                </p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/917979071560" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="tel:+917979071560" aria-label="Call"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-2">
+                <h5>Quick Links</h5>
+                <ul class="footer-links">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-2">
+                <h5>Services</h5>
+                <ul class="footer-links">
+                    <li><a href="#services">Hair Cut</a></li>
+                    <li><a href="#services">Beard Trim</a></li>
+                    <li><a href="#services">Hair Spa</a></li>
+                    <li><a href="#services">Facial</a></li>
+                    <li><a href="#services">Groom Package</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contact Info</h5>
+                <ul class="footer-links" style="color:var(--text-muted); font-size:0.9rem;">
+                    <li><i class="fas fa-map-marker-alt text-gold" style="width:20px;"></i> Pugmil Rd, Hazaribagh</li>
+                    <li><i class="fas fa-phone text-gold" style="width:20px;"></i> +91 79790 71560</li>
+                    <li><i class="fas fa-clock text-gold" style="width:20px;"></i> 08:00 AM - 09:30 PM</li>
+                    <li><i class="fas fa-envelope text-gold" style="width:20px;"></i> contact@osmomodernsalon.in</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <span>OSMO MODERN SALON</span>. All Rights Reserved.
+        </div>
+    </div>
+</footer>
 
-      // ---- TESTIMONIAL SWIPER ----
-      new Swiper('.testimonial-swiper', {
-        loop: true,
-        autoplay: { delay: 4000, disableOnInteraction: false },
-        slidesPerView: 1,
-        breakpoints: { 768: { slidesPerView: 2, spaceBetween: 24 } },
-        pagination: { el: '.swiper-pagination', clickable: true },
-      });
+<!-- ===== FLOATING BUTTONS ===== -->
+<div class="floating-buttons">
+    <a href="https://wa.me/917979071560" target="_blank" class="float-btn float-whatsapp" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="tooltip-text">WhatsApp</span>
+    </a>
+    <a href="tel:+917979071560" class="float-btn float-call" aria-label="Call Now">
+        <i class="fas fa-phone"></i>
+        <span class="tooltip-text">Call Now</span>
+    </a>
+    <button class="float-btn float-top" id="scrollTopBtn" aria-label="Scroll to top" style="display:none;">
+        <i class="fas fa-arrow-up"></i>
+        <span class="tooltip-text">Top</span>
+    </button>
+</div>
 
-      // ---- VANILLA TILT (cards) ----
-      VanillaTilt.init(document.querySelectorAll('.tilt-card'), {
-        max: 6,
-        speed: 400,
-        glare: true,
-        'max-glare': 0.15,
-      });
+<!-- ===== GALLERY MODAL ===== -->
+<div class="modal fade image-popup-modal" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="galleryModalImg" src="" alt="Gallery Image" />
+            </div>
+        </div>
+    </div>
+</div>
 
-      // ---- BOOKING FORM ----
-      document.getElementById('bookingForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        document.getElementById('bookingSuccess').classList.remove('hidden');
-        this.reset();
-        setTimeout(() => {
-          document.getElementById('bookingSuccess').classList.add('hidden');
-        }, 5000);
-      });
+<!-- ===== TOAST ===== -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 99999;">
+    <div id="liveToast" class="toast toast-custom" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="fas fa-check-circle text-gold me-2"></i>
+            <strong class="me-auto">OSMO MODERN SALON</strong>
+            <small>Just now</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="toastMessage">
+            Success!
+        </div>
+    </div>
+</div>
 
-      // ---- BACK TO TOP ----
-      const backTop = document.getElementById('backTop');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 600) {
-          backTop.classList.remove('opacity-0', 'pointer-events-none');
-        } else {
-          backTop.classList.add('opacity-0', 'pointer-events-none');
-        }
-      });
-      backTop.addEventListener('click', () => lenis.scrollTo(0, { duration: 1.5 }));
+<!-- ===== SCRIPTS ===== -->
+<!-- Bootstrap 5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</script>
+<!-- Swiper.js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+</script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js">
+</script>
 
-      // ---- MOUSE PARALLAX (hero) ----
-      document.querySelector('#hero')?.addEventListener('mousemove', (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 12;
-        const y = (e.clientY / window.innerHeight - 0.5) * 12;
-        gsap.to('#hero .hero-bg', { x: x, y: y, duration: 1.2, ease: 'power2.out' });
-      });
-
-      // ---- CONFETTI (simple after booking) ----
-      // (kept minimal for performance)
-
-      console.log('OSMO · Award-Winning Luxury');
+<script>
+    // ===== INIT AOS =====
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 60,
+        disable: 'mobile'
     });
-  </script>
+
+    // ===== LOADING SCREEN =====
+    window.addEventListener('load', function() {
+        const loader = document.getElementById('loader');
+        loader.classList.add('hidden');
+        setTimeout(() => { loader.style.display = 'none'; }, 900);
+    });
+
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('mainHeader');
+    let lastScroll = 0;
+    window.addEventListener('scroll', function() {
+        const current = window.pageYOffset;
+        if (current > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        lastScroll = current;
+
+        // Scroll to top button
+        const topBtn = document.getElementById('scrollTopBtn');
+        if (current > 400) {
+            topBtn.style.display = 'flex';
+        } else {
+            topBtn.style.display = 'none';
+        }
+    });
+
+    // ===== SCROLL TO TOP =====
+    document.getElementById('scrollTopBtn').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ===== HERO SWIPER =====
+    const heroSwiper = new Swiper('.heroSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        speed: 900,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        grabCursor: true,
+    });
+
+    // ===== REVIEWS SWIPER =====
+    const reviewsSwiper = new Swiper('.reviewsSwiper', {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        speed: 600,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+            576: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+        },
+        pagination: {
+            el: '.reviews-pagination',
+            clickable: true,
+        },
+        grabCursor: true,
+    });
+
+    // ===== GALLERY MODAL =====
+    const galleryModal = document.getElementById('galleryModal');
+    const modalImg = document.getElementById('galleryModalImg');
+    galleryModal.addEventListener('show.bs.modal', function(e) {
+        const trigger = e.relatedTarget;
+        const imgSrc = trigger.getAttribute('data-img');
+        modalImg.src = imgSrc;
+        modalImg.alt = trigger.querySelector('img')?.alt || 'Gallery Image';
+    });
+
+    // ===== FAQ TOGGLE =====
+    function toggleFaq(el) {
+        const answer = el.nextElementSibling;
+        const isOpen = answer.classList.contains('show');
+        // Close all others
+        document.querySelectorAll('.faq-answer').forEach(a => {
+            a.classList.remove('show');
+            a.style.display = 'none';
+            a.previousElementSibling.classList.add('collapsed');
+        });
+        document.querySelectorAll('.faq-question i').forEach(i => {
+            i.style.transform = 'rotate(0deg)';
+        });
+        if (!isOpen) {
+            answer.classList.add('show');
+            answer.style.display = 'block';
+            el.classList.remove('collapsed');
+            el.querySelector('i').style.transform = 'rotate(180deg)';
+        }
+    }
+    // Init FAQ - first one open
+    document.addEventListener('DOMContentLoaded', function() {
+        const firstFaq = document.querySelector('.faq-answer');
+        if (firstFaq) {
+            firstFaq.classList.add('show');
+            firstFaq.style.display = 'block';
+            const q = firstFaq.previousElementSibling;
+            if (q) q.classList.remove('collapsed');
+        }
+    });
+
+    // ===== BOOKING FORM =====
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        let valid = true;
+
+        // Validate required fields
+        const required = form.querySelectorAll('[required]');
+        required.forEach(field => {
+            if (!field.value.trim()) {
+                field.classList.add('is-invalid');
+                valid = false;
+            } else {
+                field.classList.remove('is-invalid');
+            }
+        });
+
+        // Special validation for phone
+        const phone = document.getElementById('custPhone');
+        if (phone.value.trim() && phone.value.trim().length < 10) {
+            phone.classList.add('is-invalid');
+            valid = false;
+        } else if (phone.value.trim()) {
+            phone.classList.remove('is-invalid');
+        }
+
+        if (!valid) {
+            showToast('Please fill in all required fields correctly.', 'error');
+            return;
+        }
+
+        // Gather data
+        const name = document.getElementById('custName').value.trim();
+        const phoneVal = document.getElementById('custPhone').value.trim();
+        const email = document.getElementById('custEmail').value.trim() || 'Not provided';
+        const service = document.getElementById('custService').value;
+        const date = document.getElementById('custDate').value;
+        const time = document.getElementById('custTime').value;
+        const barber = document.getElementById('custBarber').value;
+        const notes = document.getElementById('custNotes').value.trim() || 'None';
+
+        // Format date
+        const dateObj = new Date(date);
+        const formattedDate = dateObj.toLocaleDateString('en-IN', {
+            day: '2-digit',
+            month: 'short',
+            year: 'numeric'
+        });
+
+        // Build WhatsApp message
+        const msg =
+            `--------------------------------\n` +
+            `New Salon Appointment\n` +
+            `--------------------------------\n` +
+            `Name: ${name}\n` +
+            `Phone: ${phoneVal}\n` +
+            `Email: ${email}\n` +
+            `Service: ${service}\n` +
+            `Date: ${formattedDate}\n` +
+            `Time: ${time}\n` +
+            `Preferred Barber: ${barber}\n` +
+            `Notes: ${notes}\n` +
+            `--------------------------------\n` +
+            `Please confirm my appointment.`;
+
+        const encoded = encodeURIComponent(msg);
+        const waUrl = `https://wa.me/917979071560?text=${encoded}`;
+
+        // Open WhatsApp
+        window.open(waUrl, '_blank');
+
+        showToast('Redirecting to WhatsApp to confirm your booking!', 'success');
+
+        // Reset form
+        form.reset();
+        document.querySelectorAll('.form-control, .form-select').forEach(el => {
+            el.classList.remove('is-invalid');
+        });
+    });
+
+    // Remove invalid state on input
+    document.querySelectorAll('.form-control, .form-select').forEach(el => {
+        el.addEventListener('input', function() {
+            if (this.value.trim()) this.classList.remove('is-invalid');
+        });
+        el.addEventListener('change', function() {
+            if (this.value.trim()) this.classList.remove('is-invalid');
+        });
+    });
+
+    // ===== TOAST =====
+    function showToast(message, type) {
+        const toast = document.getElementById('liveToast');
+        const body = document.getElementById('toastMessage');
+        body.textContent = message;
+        if (type === 'error') {
+            toast.querySelector('.toast-header strong').textContent = '⚠️ Error';
+        } else {
+            toast.querySelector('.toast-header strong').textContent = '✅ OSMO MODERN SALON';
+        }
+        const bsToast = new bootstrap.Toast(toast, { delay: 4000 });
+        bsToast.show();
+    }
+
+    // ===== NEWSLETTER =====
+    function subscribeNewsletter() {
+        const input = document.getElementById('newsletterEmail');
+        const email = input.value.trim();
+        if (!email || !email.includes('@')) {
+            showToast('Please enter a valid email address.', 'error');
+            input.focus();
+            return;
+        }
+        showToast('Thank you for subscribing! Stay tuned for updates.', 'success');
+        input.value = '';
+    }
+
+    // ===== SMOOTH SCROLL FOR NAV LINKS =====
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const target = this.getAttribute('href');
+            if (target && target.startsWith('#')) {
+                e.preventDefault();
+                const el = document.querySelector(target);
+                if (el) {
+                    const offset = 80;
+                    const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                    // Close mobile nav
+                    const navCollapse = document.getElementById('mainNav');
+                    const bsCollapse = bootstrap.Collapse.getInstance(navCollapse);
+                    if (bsCollapse) bsCollapse.hide();
+                }
+            }
+        });
+    });
+
+    // ===== COUNTER ANIMATION (on scroll) =====
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter-number');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-count'));
+            if (isNaN(target)) return;
+            let current = 0;
+            const increment = Math.ceil(target / 60);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = current + '+';
+                }
+            }, 30);
+        });
+    }
+
+    // ===== ACTIVE NAV ON SCROLL =====
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    window.addEventListener('scroll', function() {
+        let current = '';
+        const scrollY = window.pageYOffset + 100;
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            if (scrollY >= top && scrollY < top + height) {
+                current = section.getAttribute('id');
+            }
+        });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+
+    // ===== KEYBOARD ACCESSIBILITY =====
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const modal = document.querySelector('.modal.show');
+            if (modal) {
+                const bsModal = bootstrap.Modal.getInstance(modal);
+                if (bsModal) bsModal.hide();
+            }
+        }
+    });
+
+    console.log('🚀 OSMO MODERN SALON — Premium Grooming');
+</script>
+
 </body>
 </html>
