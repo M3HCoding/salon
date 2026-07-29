@@ -1,70 +1,673 @@
 {
   "salon": {
-    "name": "OSMO MODERN SALON",
-    "rating": 3.7,
-    "reviews": 7,
-    "phone": "+917979071560",
-    "address": "Pugmil Rd, Near Kallu Chowk V-Mart, Hazaribagh",
-    "whatsapp": "917979071560"
+    "id": 1,
+    "name": "OSMO Salon",
+    "address": "Main Road, Hazaribagh, Jharkhand 825301",
+    "phone": "+91-9876543210",
+    "email": "info@osmosalon.com",
+    "rating": 4.2,
+    "totalReviews": 120,
+    "latitude": 23.9988,
+    "longitude": 85.3612,
+    "openingHours": "9:00 AM – 9:00 PM",
+    "about": "Premium grooming services in Hazaribagh."
   },
-
   "banners": [
     {
       "id": 1,
-      "title": "Experience Premium Grooming",
-      "subtitle": "Hair • Beard • Facial • Spa",
-      "image": "https://yourusername.github.io/osmo-salon-data/images/banner1.jpg"
+      "imageUrl": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=800&q=80",
+      "title": "Experience Premium\nGrooming",
+      "subtitle": "Hair • Beard • Facial • Spa"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80",
+      "title": "Expert Hair Styling",
+      "subtitle": "Crafted with precision & care"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80",
+      "title": "Beard Grooming\nRedefined",
+      "subtitle": "Shape your style with confidence"
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80",
+      "title": "Luxury Facial\nTreatments",
+      "subtitle": "Radiant skin, refreshed look"
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=800&q=80",
+      "title": "The Art of\nRelaxation",
+      "subtitle": "Spa & massage for mind & body"
     }
   ],
-
-  "services": [
+  "quickServices": [
     {
       "id": 1,
       "name": "Hair Cut",
-      "description": "Premium Hair Cut",
+      "description": "Precision cut tailored to your face shape by expert stylists.",
       "price": 150,
-      "image": "https://yourusername.github.io/osmo-salon-data/images/haircut.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80",
       "category": "HAIR"
+    },
+    {
+      "id": 2,
+      "name": "Beard Trim",
+      "description": "Expert beard styling, shaping, and grooming for a sharp look.",
+      "price": 80,
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+      "category": "BEARD"
+    },
+    {
+      "id": 3,
+      "name": "Facial",
+      "description": "Deep cleansing facial for refreshed, glowing skin.",
+      "price": 699,
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
+      "category": "FACIAL"
+    },
+    {
+      "id": 4,
+      "name": "Hair Spa",
+      "description": "Nourishing spa treatment for healthy, lustrous hair.",
+      "price": 499,
+      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "category": "SPA"
+    },
+    {
+      "id": 5,
+      "name": "Hair Color",
+      "description": "Vibrant, long-lasting color using premium products.",
+      "price": 699,
+      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80",
+      "category": "HAIR"
+    },
+    {
+      "id": 6,
+      "name": "Massage",
+      "description": "Relaxing full body massage to relieve stress and tension.",
+      "price": 199,
+      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
+      "category": "MASSAGE"
+    },
+    {
+      "id": 7,
+      "name": "Kids Haircut",
+      "description": "Fun, gentle haircuts for the little ones.",
+      "price": 120,
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=400&q=80",
+      "category": "KIDS"
     }
   ],
-
+  "popularServices": [
+    {
+      "id": 101,
+      "name": "Premium Hair Cut",
+      "description": "Luxury hair cut with hot towel, scalp massage & premium finish.",
+      "price": 250,
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80",
+      "category": "HAIR",
+      "isPopular": true
+    },
+    {
+      "id": 102,
+      "name": "Hair Spa",
+      "description": "Deep conditioning spa with steam & nourishing serum treatment.",
+      "price": 499,
+      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "category": "SPA",
+      "isPopular": true
+    },
+    {
+      "id": 103,
+      "name": "Hair Color",
+      "description": "Full head or highlight coloring using L'Oreal professional products.",
+      "price": 699,
+      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80",
+      "category": "HAIR",
+      "isPopular": true
+    },
+    {
+      "id": 104,
+      "name": "Facial Treatment",
+      "description": "Advanced skin rejuvenation with premium serums and massage.",
+      "price": 699,
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
+      "category": "FACIAL",
+      "isPopular": true
+    },
+    {
+      "id": 105,
+      "name": "Cleanup",
+      "description": "Quick refresh with deep pore cleansing and moisturising mask.",
+      "price": 399,
+      "imageUrl": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+      "category": "FACIAL",
+      "isPopular": true
+    },
+    {
+      "id": 106,
+      "name": "D-Tan",
+      "description": "Effective tan removal treatment for even skin tone.",
+      "price": 599,
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
+      "category": "FACIAL",
+      "isPopular": true
+    },
+    {
+      "id": 107,
+      "name": "Beard Styling",
+      "description": "Expert beard shaping, hot towel & precision styling.",
+      "price": 150,
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+      "category": "BEARD",
+      "isPopular": true
+    },
+    {
+      "id": 108,
+      "name": "Head Massage",
+      "description": "Therapeutic scalp and head massage using aromatic oils.",
+      "price": 199,
+      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
+      "category": "MASSAGE",
+      "isPopular": true
+    },
+    {
+      "id": 109,
+      "name": "Kids Haircut",
+      "description": "Gentle, fun cuts for kids of all ages with care and patience.",
+      "price": 120,
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=400&q=80",
+      "category": "KIDS",
+      "isPopular": true
+    },
+    {
+      "id": 110,
+      "name": "Groom Package",
+      "description": "Complete groom makeover: haircut + beard + facial + massage.",
+      "price": 1499,
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      "category": "PACKAGE",
+      "isPopular": true
+    },
+    {
+      "id": 111,
+      "name": "Bridal Groom",
+      "description": "Exclusive bridal groom package for the most important day of your life.",
+      "price": 2999,
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+      "category": "PACKAGE",
+      "isPopular": true
+    }
+  ],
+  "priceList": [
+    {
+      "id": 1,
+      "name": "Hair Cut",
+      "price": 150,
+      "category": "HAIR",
+      "description": "Classic precision cut"
+    },
+    {
+      "id": 2,
+      "name": "Premium Hair Cut",
+      "price": 250,
+      "category": "HAIR",
+      "description": "Luxury cut with hot towel & massage"
+    },
+    {
+      "id": 3,
+      "name": "Beard Trim",
+      "price": 80,
+      "category": "BEARD",
+      "description": "Shape and style your beard"
+    },
+    {
+      "id": 4,
+      "name": "Shaving",
+      "price": 100,
+      "category": "BEARD",
+      "description": "Hot towel clean shave"
+    },
+    {
+      "id": 5,
+      "name": "Hair Spa",
+      "price": 499,
+      "category": "SPA",
+      "description": "Nourishing deep conditioning"
+    },
+    {
+      "id": 6,
+      "name": "Facial",
+      "price": 699,
+      "category": "FACIAL",
+      "description": "Advanced skin rejuvenation"
+    },
+    {
+      "id": 7,
+      "name": "Cleanup",
+      "price": 399,
+      "category": "FACIAL",
+      "description": "Deep pore cleansing mask"
+    },
+    {
+      "id": 8,
+      "name": "Hair Coloring",
+      "price": 699,
+      "category": "HAIR",
+      "description": "Full color with premium products"
+    },
+    {
+      "id": 9,
+      "name": "Massage",
+      "price": 199,
+      "category": "MASSAGE",
+      "description": "Stress-relief body massage"
+    },
+    {
+      "id": 10,
+      "name": "Kids Haircut",
+      "price": 120,
+      "category": "KIDS",
+      "description": "Gentle cut for children"
+    },
+    {
+      "id": 11,
+      "name": "D-Tan",
+      "price": 599,
+      "category": "FACIAL",
+      "description": "Effective tan removal"
+    },
+    {
+      "id": 12,
+      "name": "Groom Package",
+      "price": 1499,
+      "category": "PACKAGE",
+      "description": "Complete groom makeover combo"
+    },
+    {
+      "id": 13,
+      "name": "Bridal Groom",
+      "price": 2999,
+      "category": "PACKAGE",
+      "description": "Premium bridal groom package"
+    }
+  ],
   "offers": [
     {
       "id": 1,
-      "title": "20% OFF Hair Spa",
-      "subtitle": "Limited Time",
-      "discount": "20%",
-      "image": "https://yourusername.github.io/osmo-salon-data/images/offer1.jpg"
-    }
-  ],
-
-  "gallery": [
+      "title": "Hair Spa Special",
+      "subtitle": "Book a hair spa and save big this season",
+      "discountText": "20% OFF",
+      "validUntil": "Valid till 31 Aug 2026",
+      "gradientStartHex": "#C9A84C",
+      "gradientEndHex": "#8B6914",
+      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80"
+    },
     {
-      "id": 1,
-      "image": "https://yourusername.github.io/osmo-salon-data/images/gallery1.jpg"
-    }
-  ],
-
-  "priceList": [
+      "id": 2,
+      "title": "Student Discount",
+      "subtitle": "Show your student ID and enjoy special pricing",
+      "discountText": "15% OFF",
+      "validUntil": "Valid all year",
+      "gradientStartHex": "#1E3C72",
+      "gradientEndHex": "#2A5298",
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80"
+    },
     {
-      "name": "Hair Cut",
-      "price": 150
+      "id": 3,
+      "title": "Festival Offer",
+      "subtitle": "Celebrate in style with our exclusive festival package",
+      "discountText": "25% OFF",
+      "validUntil": "Limited time offer",
+      "gradientStartHex": "#870000",
+      "gradientEndHex": "#190A05",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+    },
+    {
+      "id": 4,
+      "title": "Weekend Combo",
+      "subtitle": "Haircut + Beard + Facial at an unbeatable price",
+      "discountText": "COMBO",
+      "validUntil": "Every Saturday & Sunday",
+      "gradientStartHex": "#134E5E",
+      "gradientEndHex": "#71B280",
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80"
+    },
+    {
+      "id": 5,
+      "title": "Free Beard Trim",
+      "subtitle": "Get a free beard trim with any haircut service",
+      "discountText": "FREE",
+      "validUntil": "Valid on weekdays",
+      "gradientStartHex": "#373B44",
+      "gradientEndHex": "#4286F4",
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
     }
   ],
-
   "reviews": [
     {
+      "id": 1,
       "name": "Rahul Sharma",
-      "rating": 5,
-      "comment": "Excellent service"
+      "initials": "RS",
+      "rating": 5.0,
+      "comment": "Best salon in Hazaribagh! The premium haircut was amazing. Very professional staff.",
+      "date": "2 weeks ago"
+    },
+    {
+      "id": 2,
+      "name": "Amit Kumar",
+      "initials": "AK",
+      "rating": 4.0,
+      "comment": "Great service and clean environment. The beard styling was perfect. Will come again.",
+      "date": "1 month ago"
+    },
+    {
+      "id": 3,
+      "name": "Junaid Ali",
+      "initials": "PS",
+      "rating": 5.0,
+      "comment": "Absolutely love the facial treatment here. Skin feels so refreshed. Highly recommend!",
+      "date": "3 weeks ago"
+    },
+    {
+      "id": 4,
+      "name": "Suresh Yadav",
+      "initials": "SY",
+      "rating": 3.0,
+      "comment": "Good service, but the wait time was a bit long. Overall satisfied with the haircut.",
+      "date": "2 months ago"
+    },
+    {
+      "id": 5,
+      "name": "Deepak Mishra",
+      "initials": "DM",
+      "rating": 4.0,
+      "comment": "Excellent hair spa. Very relaxing experience. The staff is friendly and skilled.",
+      "date": "1 week ago"
+    },
+    {
+      "id": 6,
+      "name": "Salman",
+      "initials": "VT",
+      "rating": 4.0,
+      "comment": "Nice ambiance and expert barbers. The groom package was worth every rupee.",
+      "date": "3 months ago"
+    },
+    {
+      "id": 7,
+      "name": "Arjun Pandey",
+      "initials": "AP",
+      "rating": 3.0,
+      "comment": "Average experience. The haircut was okay but expected better for the price.",
+      "date": "4 months ago"
     }
   ],
-
   "barbers": [
     {
+      "id": 1,
+      "name": "Any Available",
+      "expertise": "Expert in all services",
+      "imageUrl": ""
+    },
+    {
+      "id": 2,
       "name": "Raj Kumar",
-      "speciality": "Hair & Beard",
-      "image": "https://yourusername.github.io/osmo-salon-data/images/barber1.jpg"
+      "expertise": "Senior Stylist — Hair & Beard",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80"
+    },
+    {
+      "id": 3,
+      "name": "Amit Singh",
+      "expertise": "Beard & Grooming Specialist",
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=200&q=80"
+    },
+    {
+      "id": 4,
+      "name": "Sunil Sharma",
+      "expertise": "Facial & Skin Care Expert",
+      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80"
+    },
+    {
+      "id": 5,
+      "name": "Pradeep Kumar",
+      "expertise": "Hair Color & Styling Pro",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
+    }
+  ],
+  "galleryItems": [
+    {
+      "id": 1,
+      "imageUrl": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=400&q=80",
+      "title": "Salon Interior",
+      "aspectRatio": 1.0
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=400&q=80",
+      "title": "Hair Cut",
+      "aspectRatio": 1.2
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+      "title": "Beard Style",
+      "aspectRatio": 0.8
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=400&q=80",
+      "title": "Salon Chair",
+      "aspectRatio": 1.0
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "title": "Hair Spa",
+      "aspectRatio": 1.3
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=400&q=80",
+      "title": "Hair Color",
+      "aspectRatio": 0.9
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80",
+      "title": "Facial",
+      "aspectRatio": 1.1
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
+      "title": "Massage",
+      "aspectRatio": 1.0
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      "title": "Groom Style",
+      "aspectRatio": 1.2
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+      "title": "Premium Cut",
+      "aspectRatio": 0.8
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=400&q=80",
+      "title": "Cleanup",
+      "aspectRatio": 1.0
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&q=80",
+      "title": "D-Tan",
+      "aspectRatio": 1.1
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80",
+      "title": "Barber",
+      "aspectRatio": 1.0
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+      "title": "Stylist",
+      "aspectRatio": 1.2
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&q=80",
+      "title": "Grooming",
+      "aspectRatio": 0.9
+    },
+    {
+      "id": 16,
+      "imageUrl": "https://images.unsplash.com/photo-1527799820374-87a38b8f90ee?w=400&q=80",
+      "title": "Hair Tools",
+      "aspectRatio": 1.0
+    },
+    {
+      "id": 17,
+      "imageUrl": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=400&q=80",
+      "title": "Client",
+      "aspectRatio": 1.3
+    },
+    {
+      "id": 18,
+      "imageUrl": "https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&q=80",
+      "title": "Scissors",
+      "aspectRatio": 0.8
+    },
+    {
+      "id": 19,
+      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "title": "Spa Area",
+      "aspectRatio": 1.1
+    },
+    {
+      "id": 20,
+      "imageUrl": "https://images.unsplash.com/photo-1560066984-138daaa4e4e1?w=400&q=80",
+      "title": "Reception",
+      "aspectRatio": 1.0
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "id": 1,
+      "icon": "star",
+      "title": "Experienced Stylists",
+      "description": "10+ years of professional expertise in premium grooming"
+    },
+    {
+      "id": 2,
+      "icon": "chair",
+      "title": "Luxury Interior",
+      "description": "Opulent salon ambiance for a premium experience"
+    },
+    {
+      "id": 3,
+      "icon": "health_and_safety",
+      "title": "Sanitized Equipment",
+      "description": "100% sterilized tools after every client for your safety"
+    },
+    {
+      "id": 4,
+      "icon": "currency_rupee",
+      "title": "Affordable Pricing",
+      "description": "Premium quality services at pocket-friendly prices"
+    },
+    {
+      "id": 5,
+      "icon": "workspace_premium",
+      "title": "Premium Products",
+      "description": "Only internationally acclaimed brands used"
+    },
+    {
+      "id": 6,
+      "icon": "calendar_month",
+      "title": "Online Booking",
+      "description": "Easy WhatsApp booking, no waiting in queues"
+    }
+  ],
+  "timeSlots": [
+    {
+      "id": 1,
+      "time": "08:00 AM",
+      "isAvailable": true
+    },
+    {
+      "id": 2,
+      "time": "09:00 AM",
+      "isAvailable": true
+    },
+    {
+      "id": 3,
+      "time": "10:00 AM",
+      "isAvailable": true
+    },
+    {
+      "id": 4,
+      "time": "11:00 AM",
+      "isAvailable": true
+    },
+    {
+      "id": 5,
+      "time": "12:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 6,
+      "time": "01:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 7,
+      "time": "02:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 8,
+      "time": "03:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 9,
+      "time": "04:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 10,
+      "time": "05:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 11,
+      "time": "06:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 12,
+      "time": "07:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 13,
+      "time": "08:00 PM",
+      "isAvailable": true
+    },
+    {
+      "id": 14,
+      "time": "09:00 PM",
+      "isAvailable": false
     }
   ]
 }
