@@ -1,0 +1,70 @@
+{
+  "salon": {
+    "name": "OSMO MODERN SALON",
+    "rating": 3.7,
+    "reviews": 7,
+    "phone": "+917979071560",
+    "address": "Pugmil Rd, Near Kallu Chowk V-Mart, Hazaribagh",
+    "whatsapp": "917979071560"
+  },
+
+  "banners": [
+    {
+      "id": 1,
+      "title": "Experience Premium Grooming",
+      "subtitle": "Hair • Beard • Facial • Spa",
+      "image": "https://yourusername.github.io/osmo-salon-data/images/banner1.jpg"
+    }
+  ],
+
+  "services": [
+    {
+      "id": 1,
+      "name": "Hair Cut",
+      "description": "Premium Hair Cut",
+      "price": 150,
+      "image": "https://yourusername.github.io/osmo-salon-data/images/haircut.jpg",
+      "category": "HAIR"
+    }
+  ],
+
+  "offers": [
+    {
+      "id": 1,
+      "title": "20% OFF Hair Spa",
+      "subtitle": "Limited Time",
+      "discount": "20%",
+      "image": "https://yourusername.github.io/osmo-salon-data/images/offer1.jpg"
+    }
+  ],
+
+  "gallery": [
+    {
+      "id": 1,
+      "image": "https://yourusername.github.io/osmo-salon-data/images/gallery1.jpg"
+    }
+  ],
+
+  "priceList": [
+    {
+      "name": "Hair Cut",
+      "price": 150
+    }
+  ],
+
+  "reviews": [
+    {
+      "name": "Rahul Sharma",
+      "rating": 5,
+      "comment": "Excellent service"
+    }
+  ],
+
+  "barbers": [
+    {
+      "name": "Raj Kumar",
+      "speciality": "Hair & Beard",
+      "image": "https://yourusername.github.io/osmo-salon-data/images/barber1.jpg"
+    }
+  ]
+}
