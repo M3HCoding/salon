@@ -685,13 +685,12 @@
   "profile": {
   "appName": "OSMO Modern Salon",
   "appVersion": "1.0.0",
-  "aboutTitle": "About OSMO Modern Salon",
-  "aboutDescription": "Welcome to OSMO Modern Salon, Hazaribagh's premium grooming destination. We offer professional haircuts, beard styling, facials, hair spa, massages, and luxury grooming services delivered by experienced stylists in a hygienic and comfortable environment. Our mission is to provide exceptional grooming experiences using premium products and modern techniques while ensuring customer satisfaction.",
   "shareMessage": "Experience premium grooming at OSMO Modern Salon. Download our app and book your appointment today!",
   "supportEmail": "contact@osmomodernsalon.in",
   "supportPhone": "+91 7979071560",
   "privacyPolicyUrl": "https://m3hcoding.github.io/salon/privacy.html",
   "termsUrl": "https://m3hcoding.github.io/salon/terms.html",
+  "aboutUs": "https://m3hcoding.github.io/salon/aboutus.html",
   "darkModeEnabled": true,
   "notificationEnabled": true,
   "menuItems": [
