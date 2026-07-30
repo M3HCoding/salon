@@ -681,9 +681,8 @@
       "time": "09:00 PM",
       "isAvailable": false
     }
-  ]
-},
-"profile": {
+  ],
+  "profile": {
   "appName": "OSMO Modern Salon",
   "appVersion": "1.0.0",
   "aboutTitle": "About OSMO Modern Salon",
@@ -741,4 +740,5 @@
       "icon": "info"
     }
   ]
+}
 }
