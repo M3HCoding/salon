@@ -5,9 +5,8 @@
     "about": "Premium grooming services in Hazaribagh."
     "tagline": "Experience Premium Grooming",
     "address": "Pugmil Rd, Near Kallu Chowk V-Mart, Pugmil, Hazaribagh, Jharkhand 825301",
-    "phone": "+91 7979071560",
-    "phoneRaw": "917979071560",
-    "phoneDial": "7979071560",
+    "mobileNumber": "+917979071560",
+    "mobileNumberDial": "7979071560",
     "email": "contact@osmomodernsalon.in",
     "whatsappUrl": "https://wa.me/917979071560",
     "rating": 4.2,
@@ -742,4 +741,4 @@
       "icon": "info"
     }
   ]
-},
+}
