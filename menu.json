@@ -5,7 +5,7 @@
     "about": "Premium grooming services in Hazaribagh."
     "tagline": "Experience Premium Grooming",
     "address": "Pugmil Rd, Near Kallu Chowk V-Mart, Pugmil, Hazaribagh, Jharkhand 825301",
-     "phone": "+91 7979071560",
+    "phone": "+91 7979071560",
     "phoneRaw": "917979071560",
     "phoneDial": "7979071560",
     "email": "contact@osmomodernsalon.in",
@@ -683,4 +683,63 @@
       "isAvailable": false
     }
   ]
-}
+},
+"profile": {
+  "appName": "OSMO Modern Salon",
+  "appVersion": "1.0.0",
+  "aboutTitle": "About OSMO Modern Salon",
+  "aboutDescription": "Welcome to OSMO Modern Salon, Hazaribagh's premium grooming destination. We offer professional haircuts, beard styling, facials, hair spa, massages, and luxury grooming services delivered by experienced stylists in a hygienic and comfortable environment. Our mission is to provide exceptional grooming experiences using premium products and modern techniques while ensuring customer satisfaction.",
+  "shareMessage": "Experience premium grooming at OSMO Modern Salon. Download our app and book your appointment today!",
+  "supportEmail": "contact@osmomodernsalon.in",
+  "supportPhone": "+91 7979071560",
+  "privacyPolicyUrl": "https://m3hcoding.github.io/salon/privacy.html",
+  "termsUrl": "https://m3hcoding.github.io/salon/terms.html",
+  "darkModeEnabled": true,
+  "notificationEnabled": true,
+  "menuItems": [
+    {
+      "id": 1,
+      "title": "Dark Mode",
+      "type": "toggle",
+      "enabled": true,
+      "icon": "dark_mode"
+    },
+    {
+      "id": 2,
+      "title": "Notifications",
+      "type": "toggle",
+      "enabled": true,
+      "icon": "notifications"
+    },
+    {
+      "id": 3,
+      "title": "Contact Us",
+      "type": "contact",
+      "icon": "call"
+    },
+    {
+      "id": 4,
+      "title": "Location",
+      "type": "location",
+      "icon": "location_on"
+    },
+    {
+      "id": 5,
+      "title": "Share App",
+      "type": "share",
+      "icon": "share"
+    },
+    {
+      "id": 6,
+      "title": "Rate Us on Google Play",
+      "type": "rate",
+      "icon": "star"
+    },
+    {
+      "id": 7,
+      "title": "About Us",
+      "type": "about",
+      "icon": "info"
+    }
+  ]
+},
