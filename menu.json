@@ -739,5 +739,47 @@
       "icon": "info"
     }
   ]
+},
+  "franchise": {
+  "enabled": true,
+  "title": "Own an OSMO Modern Salon Franchise",
+  "subtitle": "Start your premium grooming business with OSMO",
+  "description": "Join the OSMO Modern Salon family and become a part of one of India's fast-growing premium grooming brands. We provide complete business support including salon setup, interior design, staff training, branding, marketing assistance, software support, and operational guidance.",
+  "investment": "₹8 Lakhs - ₹20 Lakhs",
+  "franchiseFee": "₹1,50,000",
+  "shopArea": "300 - 800 sq. ft.",
+  "preferredLocation": "High street, market area, shopping complex or residential hub",
+  "expectedROI": "18 - 24 Months",
+  "support": [
+    "Salon Interior Design",
+    "Business Setup Support",
+    "Professional Staff Training",
+    "Marketing & Branding",
+    "Premium Product Supply",
+    "Billing & Booking Software",
+    "Operations Training",
+    "Grand Opening Assistance"
+  ],
+  "requirements": [
+    "Minimum 300 sq. ft. commercial shop",
+    "Basic business registration",
+    "Passion for customer service",
+    "Investment capability",
+    "Prime business location"
+  ],
+  "benefits": [
+    "Established Brand Recognition",
+    "Low Risk Business Model",
+    "Complete Technical Support",
+    "National Marketing Campaigns",
+    "Continuous Training Programs",
+    "High Growth Potential"
+  ],
+  "contactPerson": "Franchise Manager",
+  "contactNumber": "+91 7979071560",
+  "email": "franchise@osmomodernsalon.in",
+  "whatsApp": "https://wa.me/917979071560",
+  "website": "https://m3hcoding.github.io/salon/",
+  "bannerImage": "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1200&q=80"
 }
 }
