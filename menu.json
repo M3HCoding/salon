@@ -183,7 +183,7 @@
       "name": "Head Massage",
       "description": "Therapeutic scalp and head massage using aromatic oils.",
       "price": 199,
-      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1726776133324-540344f791d8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "MASSAGE",
       "isPopular": true
     },
@@ -201,7 +201,7 @@
       "name": "Groom Package",
       "description": "Complete groom makeover: haircut + beard + facial + massage.",
       "price": 1499,
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1711299478774-39fde03c2daf?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "PACKAGE",
       "isPopular": true
     },
@@ -495,7 +495,7 @@
     },
     {
       "id": 8,
-      "imageUrl": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&q=80",
+      "imageUrl": "https://plus.unsplash.com/premium_photo-1661628776646-e7d151b0d169?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "title": "Massage",
       "aspectRatio": 1.0
     },
