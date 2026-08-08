@@ -70,7 +70,7 @@
       "name": "Beard Trim",
       "description": "Expert beard styling, shaping, and grooming for a sharp look.",
       "price": 80,
-      "imageUrl": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "BEARD"
     },
     {
@@ -86,7 +86,7 @@
       "name": "Hair Spa",
       "description": "Nourishing spa treatment for healthy, lustrous hair.",
       "price": 499,
-      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "SPA"
     },
     {
@@ -129,7 +129,7 @@
       "name": "Hair Spa",
       "description": "Deep conditioning spa with steam & nourishing serum treatment.",
       "price": 499,
-      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "SPA",
       "isPopular": true
     },
@@ -210,7 +210,7 @@
       "name": "Bridal Groom",
       "description": "Exclusive bridal groom package for the most important day of your life.",
       "price": 2999,
-      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1679599441308-0f9e95330ac5?q=80&w=386&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "category": "PACKAGE",
       "isPopular": true
     }
@@ -317,7 +317,7 @@
       "validUntil": "Valid till 31 Aug 2026",
       "gradientStartHex": "#C9A84C",
       "gradientEndHex": "#8B6914",
-      "imageUrl": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1571454870646-86bf1e5b25ae?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": 2,
@@ -357,7 +357,7 @@
       "validUntil": "Valid on weekdays",
       "gradientStartHex": "#373B44",
       "gradientEndHex": "#4286F4",
-      "imageUrl": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80"
+      "imageUrl": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ],
   "reviews": [
@@ -380,7 +380,7 @@
     {
       "id": 3,
       "name": "Junaid Ali",
-      "initials": "PS",
+      "initials": "JA",
       "rating": 5.0,
       "comment": "Absolutely love the facial treatment here. Skin feels so refreshed. Highly recommend!",
       "date": "3 weeks ago"
@@ -403,8 +403,8 @@
     },
     {
       "id": 6,
-      "name": "Salman",
-      "initials": "VT",
+      "name": "Salman Ali",
+      "initials": "SA",
       "rating": 4.0,
       "comment": "Nice ambiance and expert barbers. The groom package was worth every rupee.",
       "date": "3 months ago"
@@ -445,7 +445,7 @@
     },
     {
       "id": 5,
-      "name": "Pradeep Kumar",
+      "name": "Md Maruph",
       "expertise": "Hair Color & Styling Pro",
       "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80"
     }
@@ -501,7 +501,7 @@
     },
     {
       "id": 9,
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1595407753234-0882f1e77954?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "title": "Groom Style",
       "aspectRatio": 1.2
     },
@@ -537,7 +537,7 @@
     },
     {
       "id": 15,
-      "imageUrl": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1723373457096-54329042b2b5?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "title": "Grooming",
       "aspectRatio": 0.9
     },
